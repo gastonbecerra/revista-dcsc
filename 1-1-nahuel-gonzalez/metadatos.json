@@ -1,0 +1,42 @@
+{
+  "title_sp": "IA generativa y discursos sociales en la formación de posgrado",
+  "abstract_sp": "Este artículo propone analizar una experiencia pedagógica desarrollada en el ámbito de la formación de posgrado, específicamente en la especialización en docencia universitaria en la Universidad de Flores. Esta experiencia combinó el uso de IA generativa con el análisis crítico de los discursos sociales sobre la IA. Un grupo de 26 estudiantes de disciplinas vinculadas a la salud y la educación generaron imágenes y reflexiones a partir de cinco sentidos sociales (IA como utopía/distopía, robot antropomórfico, inteligencia, revolución del conocimiento y fin del trabajo), lo cual permitió explorar cómo circulan y se resignifican estos imaginarios en contextos formativos. A partir de un enfoque cualitativo, se analizaron las producciones, evidenciando la centralidad del discurso “IA como fin del trabajo”, la persistencia de representaciones antropomórficas, y la presencia de una mirada crítica al reponer la importancia de los vínculos humanos, los saberes situados y los límites éticos de la automatización. Como conclusión, se plantea que el uso pedagógico de las IA generativas puede favorecer procesos reflexivos significativos en los profesionales en formación.",
+  "keywords_sp": ["IA generativa", "discursos sociales", "formación de posgrado"],
+
+  "title_en": "Generative AI and Social Discourses in Graduate Education",
+  "abstract_en": "This article analyzes a pedagogical experience developed in a graduate education program, specifically within a university teaching specialization at Universidad de Flores. The experience combined the use of generative AI with a critical analysis of social discourses surrounding artificial intelligence. A group of 26 students from health and education-related disciplines generated images and reflections based on five dominant social meanings of AI (AI as utopia/dystopia, anthropomorphic robot, intelligence, knowledge revolution, and end of work), allowing exploration of how these imaginaries circulate and are re-signified in educational contexts. Through a qualitative approach, the productions were analyzed, revealing the centrality of the discourse of AI as the end of work, the persistence of anthropomorphic representations, and the presence of a critical perspective that reasserts the importance of human relationships, situated knowledge, and the ethical limits of automation. The study concludes that the pedagogical use of generative AI can foster meaningful reflective processes among professionals in training.",
+  "keywords_en": ["Generative AI", "social discourses", "graduate education"],
+
+  "authors_name": ["Nahuel González"],
+  "authors_affiliation": ["Universidad de Flores"],
+  "authors_orcid": ["https://orcid.org/0009-0008-3003-657X"],
+  "authors_email": ["nahuel.gonzalez@uflouniversidad.edu.ar"],
+
+  "language": ["es"],
+  "type": "Text.Serial.Journal",
+  "format": ["application/pdf", "text/html"],
+
+  "repository_url": "MISSING",
+  "readme_url": "MISSING",
+  "archive_url": "MISSING",
+  "documentation_url": "MISSING",
+  "vignette_url": "MISSING",
+  "demo_url": "MISSING",
+  "licence_url": "MISSING",
+
+  "technologies": [],
+
+  "source": "Desarrollos en ciencias sociales computacionales",
+  "publisher": "Universidad de Flores, Argentina",
+  "section": "Artículos de investigación",
+  "source_volume": "1",
+  "source_issue": "1",
+  "source_issn": "",
+  "identifier": "",
+  "identifier_uri": "",
+  "pages": "",
+
+  "date_created": "2025-11-15",
+  "date_issued": "2026-2-10",
+  "date_modified": "2026-2-27"
+}

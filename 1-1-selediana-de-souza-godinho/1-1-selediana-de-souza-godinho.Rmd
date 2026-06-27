@@ -1,0 +1,333 @@
+---
+title: "Revista Desarrollos en Ciencias Sociales Computacionales"\r\nknit: (function(inputFile, ...) {
+  rmarkdown::render(inputFile, output_dir = "outputs", ...)
+})
+output:
+  html_document:
+    self_contained: true
+    theme: null
+    mathjax: null
+    highlight: tango
+    includes:
+      in_header: "custom-head.html"
+  word_document: default
+  pdf_document: 
+    latex_engine: xelatex
+    keep_tex: true
+    highlight: tango
+bibliography: referencias.bib
+csl: ../template/apa.csl
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{Fira Sans Condensed}
+---
+
+
+```{r header, echo=FALSE, results='asis'}
+source("../template/header.R")
+```
+
+## Introducción
+
+La rápida evolución de la tecnología de Inteligencia Artificial (IA) ha generado transformaciones significativas en diversas esferas de la vida, incluyendo la forma en que las personas se comunican. Particularmente en el campo educativo, la irrupción de estas herramientas ha despertado un debate intenso, marcado por la expectativa, la curiosidad y la incertidumbre sobre sus enormes implicaciones en la construcción y diseminación del conocimiento en el ámbito universitario.
+
+La literatura científica presenta la definición y características de la IA desde un aspecto distintivo y poderoso de los sistemas modernos, particularmente las redes neuronales que radica en su capacidad para aprender autónomamente las reglas y patrones de un dominio a partir de conjuntos de datos masivos, sin necesidad de que las reglas sean explícitamente especificadas por expertos humanos. A diferencia de enfoques previos como la IA simbólica, la falta de conocimiento de alto nivel preembebido se compensa con la capacidad de inferir estadísticamente un modelo del dominio a partir de una cantidad suficiente de datos [@gutierrez2021historia].
+
+La integración de la IA ha sido progresiva en la vida cotidiana, alcanzando una relevancia creciente en espacios estructurados de conocimiento. Su relación con la cognición humana es fundamental para procesar y generar información [@boden2003creative; @gutierrez2021historia]. Si bien el enfoque simbólico y la creatividad humana son importantes para modelar y duplicar sistemas de IA, la IA permite la exploración y transformación de conceptos, posibilitando lo que se ha denominado "creatividad informática" [@boden2003creative, p.7].
+
+Boden (2003) plantea si las computadoras pueden ser creativas o al menos parecerlo, sugiriendo una capacidad creativa restringida en tanto puedan involucrarse en procesos de generación de ideas o soluciones innovadoras, aunque el proceso creativo en su sentido más amplio se considera limitado al ser humano. Estos conceptos conllevan cuestiones filosóficas y teóricas relevantes para comprender la naturaleza y características de sistemas como ChatGPT, aunque su profundización excede el alcance del presente trabajo.
+
+En este contexto, resulta pertinente explorar la forma en que un modelo de lenguaje de gran escala como ChatGPT construye y presenta el conocimiento sobre la propia Inteligencia Artificial, reconociendo que su base de entrenamiento se extiende hasta 2021 y, por lo tanto, su información puede no ser la más precisa o actualizada. Utilizando la perspectiva de Boden sobre la creatividad informática como marco de referencia, se presenta a continuación la conceptualización de IA generada por ChatGPT mismo [@boden2003creative].
+
+Van Dis (2023) desarrolló un trabajo cuyo objeto de estudio se basó en ChatGPT, un modelo de lenguaje grande (LLM) que representa una nueva generación en la interacción con los datos.  Este sistema de aprendizaje automático posee la capacidad de aprender de manera autónoma y esto se logra utilizando un conjunto masivo de datos textuales que producen un estilo de escritura que aparenta ser académicamente inteligente porque ante preguntas complejas ofrece respuestas detalladas. Estos sistemas poseen la capacidad de aprender reglas y patrones a partir del ingreso de datos sin la intervención humana explicita, siendo esta una característica distintiva de la IA moderna. 
+ 
+Otro aporte en este tema es el que realiza García Sánchez (2023), quien examina el uso de ChatGPT como instrumento para mejorar la calidad del aprendizaje en el ámbito de la educación superior en la Universidad Autónoma de Sinaloa (México). El autor empleó un estudio descriptivo, cuya muestra estaba constituida por 266 estudiantes de diversas carreras. Los resultados fueron los siguientes: el 79% no percibía mejoras en su capacidad de investigación y análisis de la información mediante el uso de ChatGPT. Mientras que un 83% carecía de confianza en la preparación de las actividades académicas porque según ellos los docentes no integraban la tecnología en las clases. Pese a esto, el 58% consideró recomendable que las facultades incorporasen herramientas de IA, entre ellas el ChatGPT. Lo descripto anteriormente da cuenta de que el uso no está ampliamente extendido y que aún perduran dudas sobre la adaptación e integración en las prácticas educativas.
+
+En esa misma línea, Guerschberg (2024) destaca el potencial del ChatGPT como instrumento funcional y eficaz para buscar información, su utilización en el aprendizaje propicia y facilita la vida académica. Siendo necesario el establecimiento de pautas claras que susciten la integración de manera efectiva y ética. Según el autor los docentes pueden resistirse a su uso por considerar el peligro de plagio y que los estudiantes posiblemente sean dependientes de su uso.
+ 
+Según Iturralde (2024) el ChatGPT es utilizado en los procesos educativos dentro y fuera del aula. Los docentes lo emplean para verificar información, generar contenido y agilizar la elaboración de actividades. El uso de este recurso pedagógico permitiría optimizar el tiempo y apoyar la escritura académica. Esto podría generar algunos desafíos entre los que se encuentran: riesgo de plagio, veracidad de la información y posible dependencia tecnológica, además de afectar en los estudiantes el desarrollo de habilidades críticas.
+
+El ChatGPT en su uso en la academia posee un potencial, pero también plantea desafíos éticos y epistemológicos. Esto genera inquietud, considerando que su uso inadecuado podría originar distorsiones con hechos científicos u ocasionar desinformación con lo que se difunde. Algunos especialistas hacen referencia a que el empleo de manera incorrecta de esta IA podría generar inexactitudes, sesgos o plagios. En algunos casos estos programas son cuestionados en su producción de textos porque los mismo carecerían de sustentación teórica o empírica, siendo descriptos como producciones “sin alma” o “sin beingness”. Esto modelos también se encontrarían limitados para realizar citas de manera correcta o para adherirse a marcos normativos y éticos del estilo de escritura académica [@wang2023chatgpt; @dis2023]
+
+La incorporación de la inteligencia artificial en el ámbito educativo requiere que la comunidad académica adopte una postura meditada y analítica, además de asegurar una capacitación que sea continua para aprovechar al máximo sus beneficios. Es relevante que los educadores adquieran las competencias necesarias para orientar a los estudiantes y así enseñarles a utilizar estas tecnologías de forma responsable y eficaz, preparándolos así para un mercado laboral en continua evolución tecnológica. Por lo tanto, la formación docente y un debate profundo sobre el impacto de la IA son pilares esenciales para enfrentar los desafíos éticos y pedagógicos que surgen con su aplicación [@guerschberg2024; @iturralde2024].
+
+Desde el lanzamiento del ChatGPT en noviembre de 2022, su adopción fue muy rápida, eso ocasionó un impacto en beneficios y riesgos. Motivo por el cual se considera relevante analizar cómo los docentes, figuras centrales en el entorno universitario, perciben esta tecnología. También es importante revisar las primeras investigaciones académicas que han explorado este fenómeno. Al examinar estas percepciones iniciales, será posible establecer un marco de referencia que ayude a comprender el contexto actual y desmitificar las ideas erróneas que se han generado sobre el uso de ChatGPT en el ámbito educativo.
+
+Considerando lo expuesto anteriormente, el objetivo propuesto en este estudio consiste en exponer las opiniones que poseen los docentes de la Universidad de Flores sobre el uso de ChatGPT en la educación universitaria, considerando los desafíos éticos y epistemológicos que plantea esta tecnología.
+
+Para abordar este objetivo, la metodología empleada es cuantitativa, descriptiva, con una encuesta dirigida a los docentes de la Universidad de Flores realizada en el periodo de abril a junio de 2023, orientada a identificar su grado de conocimiento y visiones sobre el uso de la IA en la educación universitaria.
+
+## Metodología
+
+El método de este estudio es la investigacion cuantitativa, exploratoria y descriptica a partir de una encuesta online dirigida a 151 los docentes de la Universidad de Flores. La encuesta se llevó a cabo de abril a junio de 2023.
+
+El objetivo de esta encuesta fue identificar el grado de conocimiento de los docentes de la Universidad de Flores sobre el uso de la Inteligencia Artificial (IA) en la educación universitaria y sus experiencias el uso del ChatGPT en la educación universitaria. Se aclara que las preguntas del formulario fueron realizadas con la ayuda del ChatGPT. 
+
+La participación de los participantes fue completamente voluntaria y los datos tratados de forma confidencial. Los datos fueron analizados con el programa IBM SPSS Statistics Visor y Tablas Dinámicas del Excel.
+  
+
+## Resultados
+
+
+La mayoría de los docentes encuestados (69.5%) reportan no haber utilizado nunca ChatGPT en su enseñanza. Aproximadamente 22, 5% ha tenido alguna experiencia con la herramienta (sumando "Sí, varias veces" y "Sí, una vez"), mientras que un pequeño porcentaje (7.9%) desconoce qué es ChatGPT.
+
+#### Figura 1. Uso del ChatGPT en la enseñanza 
+
+```{r echo=FALSE, fig.height=2.5, fig.width=6}
+
+path <- "Formularioencuesta.xlsx"
+x <- readxl::read_excel(path)
+
+revista_theme <- ggplot2::theme_minimal(base_family = "Fira Sans Condensed", base_size = 12) +
+  ggplot2::theme(
+    text = ggplot2::element_text(color = "#333333", size = 9),
+    plot.title = ggplot2::element_text(face = "bold", size = 10, hjust = 0.5, color = "#333333"),
+    axis.text = ggplot2::element_text(size = 10, color = "#333333"),
+    axis.title = ggplot2::element_blank(),
+    panel.grid.major.y = ggplot2::element_blank(),
+    panel.grid.minor = ggplot2::element_blank(),
+    panel.grid.major.x = ggplot2::element_line(color = "grey85")
+  )
+
+revista_fill <- ggplot2::scale_fill_manual(values = "#9237E2")
+revista_color <- ggplot2::scale_color_manual(values = "#9237E2")
+
+x |>
+  dplyr::count(`1.¿Ha utilizado alguna vez el ChatGPT en su enseñanza?`) |>
+  dplyr::mutate(pct = 100 * n / sum(n)) |>
+  dplyr::mutate(`1.¿Ha utilizado alguna vez el ChatGPT en su enseñanza?` =
+                  reorder(`1.¿Ha utilizado alguna vez el ChatGPT en su enseñanza?`, pct)) |>
+  ggplot(aes(x = `1.¿Ha utilizado alguna vez el ChatGPT en su enseñanza?`,
+             y = pct,
+             fill = "Respuestas")) +
+  geom_col(show.legend = FALSE) +
+  geom_text(aes(label = paste0(round(pct, 1), "%")),
+            hjust = -0.2, size = 3, family = "Fira Sans Condensed", color = "#333333") +
+  coord_flip() +
+  scale_y_continuous(expand = expansion(mult = c(0, .1))) +
+  revista_theme +
+  revista_fill
+
+
+```
+
+
+
+#### Figura 2 Importancia de la implementación de tecnologías de IA en la educación universitaria
+
+
+```{r echo=FALSE, fig.height=2.5, fig.width=6}
+
+x |>
+  dplyr::count(`2. ¿Considera importante la implementación de tecnologías de inteligencia artificial en la educación universitaria ?`) |>
+  dplyr::mutate(pct = 100 * n / sum(n)) |>
+  dplyr::mutate(`2. ¿Considera importante la implementación de tecnologías de inteligencia artificial en la educación universitaria ?` =
+                  reorder(`2. ¿Considera importante la implementación de tecnologías de inteligencia artificial en la educación universitaria ?`, pct)) |>
+  ggplot(aes(x = `2. ¿Considera importante la implementación de tecnologías de inteligencia artificial en la educación universitaria ?`,
+             y = pct,
+             fill = "Respuestas")) +
+  geom_col(show.legend = FALSE) +
+  geom_text(aes(label = paste0(round(pct, 1), "%")),
+            hjust = -0.2, size = 3, family = "Fira Sans Condensed", color = "#333333") +
+  coord_flip() +
+  scale_y_continuous(expand = expansion(mult = c(0, .1))) +
+  revista_theme +
+  revista_fill
+
+
+```
+
+Los datos recolectados revelan que existe un alto grado de acuerdo entre los docentes sobre la importancia de implementar IA en la educación universitaria, con más del 83.5% considerándola "muy importante" o "importante, pero no esencial". Muy pocos docentes la consideran no importante (7.9%) o manifiestan no saber (8,6%).
+	
+
+#### Figura 3 El uso del ChatGPT para mejorar la calidad de la educación 
+
+
+
+```{r echo=FALSE, fig.height=2.5, fig.width=6}
+
+x |>
+  dplyr::rename(var = 4) |>                 
+  filter(!is.na(var))|>                 
+  dplyr::count(var) |>
+  dplyr::mutate(pct = 100 * n / sum(n)) |>
+  dplyr::mutate(var = reorder(var, pct)) |>
+  ggplot(aes(x = var, y = pct, fill = "Respuestas")) +
+  geom_col(show.legend = FALSE) +
+  geom_text(aes(label = paste0(round(pct, 1), "%")),
+            hjust = -0.2, size = 3,
+            family = "Fira Sans Condensed", color = "#333333") +
+  coord_flip() +
+  scale_y_continuous(expand = expansion(mult = c(0, .1))) +
+  revista_theme +
+  revista_fill
+
+
+```
+
+  
+La opinión predominante (66.7%) de los participantes es que la mejora de la calidad educativa por parte de ChatGPT "tal vez, depende del contexto". Un porcentaje (14%) considera que si, mientras que una minoría no cree que sea útil (8.7%) o no sabe (10.6%).
+
+
+#### Figura 4 Areas o disciplinas que el ChatGPT sería más útil para los estudiantes universitarios 
+
+```{r echo=FALSE, fig.height=2.5, fig.width=6}
+
+x |>
+  dplyr::rename(var = 5) |>             
+  filter(!is.na(var))|>                 
+  dplyr::count(var) |>
+  dplyr::mutate(pct = 100 * n / sum(n)) |>
+  dplyr::mutate(var = reorder(var, pct)) |>
+  ggplot(aes(x = var, y = pct, fill = "Respuestas")) +
+  geom_col(show.legend = FALSE) +
+  geom_text(aes(label = paste0(round(pct, 1), "%")),
+            hjust = -0.2, size = 3,
+            family = "Fira Sans Condensed", color = "#333333") +
+  coord_flip() +
+  scale_y_continuous(expand = expansion(mult = c(0, .1))) +
+  revista_theme +
+  revista_fill
+
+
+```
+
+  
+El 50,3% de los encuestados respondieron que creen que ChatGPT sería útil "en todas las áreas" y el 22.1% consideran que sería más útil "en áreas técnicas o científicas". Las áreas humanísticas o sociales son consideradas prioritarias por una pequeña minoría “2,8% y 24,8% no sabe.
+
+#### Figura 5 El ChatGPT como una herramienta útil para la enseñanza a distancia o en linea
+
+
+```{r echo=FALSE, fig.height=2.5, fig.width=6}
+
+x |>
+  dplyr::rename(var = 6) |>             
+  filter(!is.na(var))|>                 
+  dplyr::count(var) |>
+  dplyr::mutate(pct = 100 * n / sum(n)) |>
+  dplyr::mutate(var = reorder(var, pct)) |>
+  ggplot(aes(x = var, y = pct, fill = "Respuestas")) +
+  geom_col(show.legend = FALSE) +
+  geom_text(aes(label = paste0(round(pct, 1), "%")),
+            hjust = -0.2, size = 3,
+            family = "Fira Sans Condensed", color = "#333333") +
+  coord_flip() +
+  scale_y_continuous(expand = expansion(mult = c(0, .1))) +
+  revista_theme +
+  revista_fill
+
+
+```
+
+
+La 57,3% de los docentes cree que ChatGPT podría ser útil para la enseñanza a distancia o en línea, dependiendo del contexto. Un porcentaje adicional (25.3%) está convencido de su utilidad definitiva en este ámbito. Muy pocos consideran que no sería útil (7,4%) o no saben (10%).
+
+#### Figura 6 El uso del ChaGPT para mejorar la interacción entre los estudiantes y los profesores
+  
+  
+```{r echo=FALSE, fig.height=2.5, fig.width=6}
+
+x |>
+  dplyr::rename(var = 7) |>             
+  filter(!is.na(var))|>                 
+  dplyr::count(var) |>
+  dplyr::mutate(pct = 100 * n / sum(n)) |>
+  dplyr::mutate(var = reorder(var, pct)) |>
+  ggplot(aes(x = var, y = pct, fill = "Respuestas")) +
+  geom_col(show.legend = FALSE) +
+  geom_text(aes(label = paste0(round(pct, 1), "%")),
+            hjust = -0.2, size = 3,
+            family = "Fira Sans Condensed", color = "#333333") +
+  coord_flip() +
+  scale_y_continuous(expand = expansion(mult = c(0, .1))) +
+  revista_theme +
+  revista_fill
+
+
+```
+
+ 
+#### Figura 7 El uso del ChaGPT como herramienta de ayuda a los estudiantes con necesidades especiales o que requieren apoyo adicional
+ 
+
+```{r echo=FALSE, fig.height=2.5, fig.width=6}
+
+x |>
+  dplyr::rename(var = 8) |>             
+  filter(!is.na(var))|>                 
+  dplyr::count(var) |>
+  dplyr::mutate(pct = 100 * n / sum(n)) |>
+  dplyr::mutate(var = reorder(var, pct)) |>
+  ggplot(aes(x = var, y = pct, fill = "Respuestas")) +
+  geom_col(show.legend = FALSE) +
+  geom_text(aes(label = paste0(round(pct, 1), "%")),
+            hjust = -0.2, size = 3,
+            family = "Fira Sans Condensed", color = "#333333") +
+  coord_flip() +
+  scale_y_continuous(expand = expansion(mult = c(0, .1))) +
+  revista_theme +
+  revista_fill
+
+
+```
+
+
+Según los datos recolectados el 55.3% de los docentes opina que "tal vez, en ciertos casos". ChatGPT podría ser una herramienta útil para ayudar a estudiantes con necesidades especiales o que requieren apoyo adicional. Una porción menor pero apreciable (28.7%) cree que definitivamente sí podría ayudarles.). El 9,3% respondieron que no sabe y 6,7% no crea que sea útil.
+
+
+#### Figura 8 Opinión general sobre el uso del ChaGPT en la educación 
+
+
+```{r echo=FALSE, fig.height=2.5, fig.width=6}
+
+x |>
+  dplyr::rename(var = 9) |>             
+  filter(!is.na(var))|>                 
+  dplyr::count(var) |>
+  dplyr::mutate(pct = 100 * n / sum(n)) |>
+  dplyr::mutate(var = reorder(var, pct)) |>
+  ggplot(aes(x = var, y = pct, fill = "Respuestas")) +
+  geom_col(show.legend = FALSE) +
+  geom_text(aes(label = paste0(round(pct, 1), "%")),
+            hjust = -0.2, size = 3,
+            family = "Fira Sans Condensed", color = "#333333") +
+  coord_flip() +
+  scale_y_continuous(expand = expansion(mult = c(0, .1))) +
+  revista_theme +
+  revista_fill
+
+
+```
+
+  
+La opinión general predominante (67,1%) sobre el uso de ChatGPT en la educación universitaria es que "Es positivo en ciertos casos". La suma de opiniones positivas ("Muy positivo" + "Positivo en ciertos casos") alcanza el 83.59%, lo que sugiere una visión mayoritariamente favorable, aunque cautelosa y dependiente del contexto, por parte de los docentes encuestados en relación con esta tecnología. Una minoría considera que es indiferente (7.4%) o negativo (8.7%).
+
+
+## Discusión y Conclusiones
+
+De acuerdo con el objetivo de este trabajo, que es describir las opiniones de los docentes de la Universidad de Flores sobre el uso emergente de ChatGPT en la educación universitaria, se ha observado que los 151 docentes reflejan una percepción limitada respecto al uso de la inteligencia artificial.
+
+
+Los resultados de la encuesta revelan que un 69.5% de los participantes respondieron no haber utilizado la herramienta, un 22.5% que la ha empleado al menos una vez y un 7.9% que desconoce su existencia. Se resalta que los datos son referentes al periodo post lanzamiento del ChaGPT (noviembre de 2022), luego estos hallazgos describen una etapa inicial en la integración de la inteligencia artificial (IA) en el contexto educativo universitario, marcada por la cautela y la falta de familiaridad con esta tecnología emergente. Estos datos se alinean con Boden (2003) que observa el uso de la informática como una barrera percibida entre los docentes. 
+
+
+Como señala Van Dis (2023), hay una resistencia y desconfianza en el grupo de docentes cuanto, al uso de la tecnología, en parte por la falta de conocimiento, y por otra por la preocupación con los riesgos éticos y epistémicos. Mismo con una percepción positiva general, donde donde el 51,0% de los encuestados respondieron “"importante, pero no esencial” y el 32,5% "Sí, muy importante” y una baja percepción negativa (solo el 7,9% considera que” no es importante2), sugiere que aún hay vacíos en la concientización y entendimiento docente sobre la implementar y uso de tecnologías de en la educación universitaria.
+
+
+Explica Abeliuk y Gutierrez (2021) la IA, en este caso el ChatGPT, aprende patrones de datos masivos, lo que podría ser percibido como una oportunidad para la docencia en la personalización del proceso de enseñanza/aprendizaje. Sin embargo, la preocupación por la falta de sustentación teórica en las respuestas de IA podría limitar su aceptación como herramienta central [@wang2023chatgpt].
+
+
+En el caso de este estudio, el 66,7% de los docentes contestaron que el uso del ChatGPT para mejoría de la calidad educativa, depende del contexto. Según Van Dis (2023) el ChatGPt, podría ser una herramienta estrategia en la generación de contenido más interactivos o mismo contestar a preguntas complejas.
+ 
+Se destaca, los desafíos relacionados con el plagio, la desinformación o la incapacidad del ChatGPT frente a las citas correctas de los conceptos y teorías. Van Dis (2023) sobre la distorsión de hechos científicos o la falta de rigor académico, lo que cuestiona la validez del conocimiento producido por estos modelos.
+
+
+La importancia asignada a la implementación de tecnologías de IA (Figura 2) sugiere una apertura potencial hacia la innovación educativa, pero los resultados indican que esta disposición no se traduce aún en un uso generalizado. Esto podría estar relacionado con la necesidad de formación docente, políticas institucionales claras y un marco ético que guíe la integración de la IA. Comparado con estudios internacionales, como los revisados por Lund y Wang (2023), la Universidad de Flores parece estar en una fase exploratoria, donde la curiosidad coexiste con la incertidumbre sobre cómo equilibrar los beneficios y riesgos de ChatGPT.
+
+
+Por último, en la Universidad de Flores, con desafíos éticos y epistemológicos que requieren atención. Se considera determinante la formación continua en el uso de la IA en la docencia y el desarrollo de directrices éticas para el uso de la IA, como herramienta para maximizar su potencial educativo mientras se mitigan sus riesgos. Futuras investigaciones podrían explorar cómo las percepciones evolucionan con el tiempo y comparar estos hallazgos con otras instituciones, este estudio refleja un panorama de adopción inicial de ChatGPT para comprender mejor la integración de la IA en la educación superior.
+
+## Referencias
+
+<div id="refs"></div>
+

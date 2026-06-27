@@ -1,0 +1,84 @@
+---
+title: "Revista Desarrollos en Ciencias Sociales Computacionales"\r\nknit: (function(inputFile, ...) {
+  rmarkdown::render(inputFile, output_dir = "outputs", ...)
+})
+output:
+  html_document:
+    self_contained: true
+    theme: null
+    mathjax: null
+    highlight: tango
+    includes:
+      in_header: "custom-head.html"
+  word_document: default
+  pdf_document: 
+    latex_engine: xelatex
+    keep_tex: true
+    highlight: tango
+bibliography: referencias.bib
+csl: ../template/apa.csl
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{Fira Sans Condensed}
+---
+
+
+```{r header, echo=FALSE, results='asis'}
+source("../template/header.R")
+```
+
+## Introducción
+
+La Inteligencia Artificial (IA) ha dejado de ser una promesa futurista para consolidarse como una realidad palpable que, entre otras cosas, redefine la producción académica y los procesos de estudio. En este contexto, durante la semana del 10 de noviembre de 2025, como equipo de estudiantes del Instituto Superior Don Bosco participamos en la III Jornada de Inteligencia Artificial y Tecnologías Emergentes y Disruptivas en la Enseñanza Universitaria, instancia que nos permitió presentar una ponencia en la Universidad de Flores (UFLO) sobre el uso educativo de esta tecnología.
+
+La experiencia presentada se desarrolló en el espacio curricular Iniciación a la Lectura y Escritura Filosófica, correspondiente al primer año del profesorado, bajo la dirección del profesor Luis Lanza. En el mismo, el docente introdujo herramientas digitales vinculadas a las distintas unidades trabajadas: entre ellas, se abordó la Inteligencia Artificial. 
+
+La importancia del presente estudio se basa en la necesidad de preparar a los futuros docentes de Filosofía para adoptar estos nuevos recursos desde una perspectiva reflexiva, responsable y crítico-constructiva.
+
+## Recursos utilizados
+
+En el ámbito del aula, nuestro docente propuso reflexionar sobre el desarrollo tecnológico en relación con las sociedades humanas. A partir de un recorrido histórico, se analizó cómo surgen distintas tecnologías y de qué modo estas influyen, tanto en su creación como en sus usos. Ante la irrupción de lo nuevo y lo innovador, este proceso se nos presenta como objeto de problematización pedagógica, lo que permite vincular la realidad concreta con las concepciones e interpretaciones que se van construyendo socialmente.
+
+En la experiencia propuesta se recurrió principalmente al uso conjunto de las inteligencias artificiales ChatGPT y Gemini como herramientas de apoyo para la actividad. La metodología adoptada fue de carácter colaborativo y enfoque flexible a partir de la interacción con dichos recursos.
+
+En este marco, el trabajo con la herramienta puede distinguirse en dos momentos principales:
+
+### Primera Etapa: Exploración Libre
+
+Esta fase inicial tuvo como objetivo la familiarización con las herramientas. Cada estudiante probó diferentes enfoques con ChatGPT y Gemini de forma abierta, lo que permitió conocer sus capacidades y limitaciones. Este momento se centró en el uso exploratorio, donde se plantearon preguntas amplias para observar la generación de ideas y puntos de vista sin un objetivo específico.
+El principal mecanismo de feedback utilizado fue la discusión en grupo. A medida que cada miembro obtenía respuestas de la IA, las compartía con el resto del equipo. Este feedback colectivo nos permitió evaluar la coherencia de la IA en relación con el tema trabajado. Se priorizaron aquellas respuestas que lograron sintetizar ideas complejas de forma clara.
+
+
+### Segunda Etapa: Experimentación Dirigida
+
+Tras la etapa de reconocimiento, el trabajo se focalizó en la consigna propuesta por el docente: la producción individual de un ensayo filosófico. En esta instancia se implementaron los enfoques de definición de roles y de asistencia en la organización sobre la temática de cada ensayo. 
+
+La interacción dinámica fue un aspecto clave en la metodología de uso, llevada adelante mediante una serie de diálogos interactivos. Antes de recibir una respuesta final, la estructura y el contenido inicial propuestos por la IA fueron retroalimentados con nuevos prompts con el fin de afinar el texto y asegurar su coherencia, reflejando un proceso de constante diálogo y ajuste. 
+
+Clasificamos las perspectivas exploradas en tres categorías principales:
+
+- Uso exploratorio: Se desarrolló una fase orientada a la exploración de la herramienta. Se plantearon preguntas amplias a las IAs con un objetivo expectante, con el fin de observar sus respuestas y su capacidad para generar ideas o puntos de vista. 
+- Definición de roles: Solicitamos a la IA que asumiera roles concretos (por ejemplo, “docente de filosofía" o “estudiante de primer año”) para obtener perspectivas distintas, ya sea didácticas o introductorias.
+- Asistencia en la organización: Utilizamos prompts para que la IA elabore una guía de trabajo y una estructura detallada del escrito, especificando las ideas de los autores y los argumentos principales.
+
+La efectividad de la herramienta se midió por su capacidad para ayudarnos a organizar el material de estudio y a construir un argumento coherente para el trabajo.
+
+
+## Discusión y Conclusiones
+
+Transitar esta experiencia con el acompañamiento de nuestra institución educativa, en el espacio del aula y del trabajo grupal, así como la invitación de la Universidad de Flores para participar y compartir experiencias, nos permitió profundizar nuestra formación académica como sujetos críticos y reflexivos, repensando nuestro lugar de compromiso con el conocimiento, su asimilación, elaboración y producción. En dichas instancias se compartió la necesidad de continuar conociendo, problematizando y construyendo saberes a partir de la realidad que se nos presenta, mediada por el avance y la acelerada incorporación de herramientas tecnológicas.  
+
+El uso de la IA en espacios educativos presenta un claro dilema: por un lado, se vuelve una poderosa herramienta para la exploración de bibliografía, ideas disparadoras y sugerencias. Esto potencia la profundidad de los trabajos poniendo al alcance posibilidades nuevas de manera menos laboriosa.
+Por otro lado, su abuso lleva a una peligrosa dependencia: el delegar el trabajo intelectual atenta directamente contra la reflexión, esencia del pensamiento crítico y fin fundamental de la educación, conduciendo a una situación de enajenación del pensamiento.
+
+El pensamiento humano no surge de ideas dispersas ni de información aislada, sino desde la situación concreta en la que el ser humano se encuentra [@hei]. Es decir, en aquella apertura inicial al mundo que se manifiesta en una disposición anímica, y que constituye la forma fundamental de estar en el mundo (sentir y palpitar la realidad existente). Este encontrarse es lo que implica el ser humano en su totalidad. Solo a partir de esta disposición, el pensamiento puede interpretar y organizar en conceptos aquello que se le presenta en su apertura, donde las ramificaciones de la experiencia son dadas y percibidas por este don inherente al hombre.
+
+Esta disposición anímica, en la que el ser humano se reconoce y se configura, constituye la voz originaria a la que el pensamiento responde. La IA, en cambio, carece de esta escucha auténtica: solo procesa datos; no se abre a la resonancia afectiva que orienta la comprensión humana, ya que no es capaz de estar en el mundo de manera existencial.
+
+Desde nuestro lugar como estudiantes y futuros profesores de Filosofía, concluímos que forma parte del rol docente enseñar a los alumnos no sólo cómo utilizar la IA, sino también cómo, cuándo y por qué debe ser utilizada. El objetivo del docente es contribuir a la formación de adolescentes y futuros profesionales con una perspectiva reflexiva y responsable, que puedan diferenciar entre una herramienta útil para el trabajo intelectual y una dependencia que podría resultar negativa.
+
+
+## Referencias
+
+<div id="refs"></div>
+

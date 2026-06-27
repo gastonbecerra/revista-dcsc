@@ -1,0 +1,100 @@
+---
+title: "Revista Desarrollos en Ciencias Sociales Computacionales"\r\nknit: (function(inputFile, ...) {
+  rmarkdown::render(inputFile, output_dir = "outputs", ...)
+})
+output:
+  html_document:
+    self_contained: true
+    theme: null
+    mathjax: null
+    highlight: tango
+    includes:
+      in_header: "custom-head.html"
+  word_document: default
+  pdf_document: 
+    latex_engine: xelatex
+    keep_tex: true
+    highlight: tango
+bibliography: referencias.bib
+csl: ../template/apa.csl
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{Fira Sans Condensed}
+---
+
+
+```{r header, echo=FALSE, results='asis'}
+source("../template/header.R")
+```
+
+## Introducción: estudiar en la era de la IA
+
+En el contexto de la expansión acelerada de la inteligencia artificial generativa (IA) en diversos ámbitos sociales y de su rápida incorporación al campo educativo, a comienzos del ciclo lectivo 2025 inicié, como estudiante, un proceso sistemático de interacción con estas herramientas.
+
+El objetivo inicial de este uso fue de carácter instrumental: emplear estas tecnologías para tareas de resumen, redacción y estudio. Sin embargo, a medida que avanzaban las interacciones, comencé a observar no solo la capacidad de la IA generativa para imitar el lenguaje humano y sus sutilezas, sino también su potencial para sostener la atención y el involucramiento cognitivo del usuario. Esto abrió una serie de preguntas sobre los efectos en los procesos de aprendizaje y en la construcción de la subjetividad.
+
+En este marco, los dilemas éticos que atraviesan tanto a estudiantes como a docentes no constituyen situaciones individuales aisladas, sino que expresan una transformación educativa más amplia, inscripta en las lógicas de la modernidad contemporánea. En términos de Bauman, vivimos en una “modernidad líquida” caracterizada por la fragilidad de los vínculos, la inestabilidad de las referencias y la primacía de la inmediatez sobre los procesos duraderos [@bauman2000].
+
+La incorporación acelerada de la IA en el ámbito educativo profundiza estas dinámicas, promoviendo formas de aprendizaje cada vez más rápidas y desancladas del tiempo subjetivo de elaboración.
+
+## Herramientas de IA y configuración de la experiencia
+
+El eje principal del análisis se centró en el uso de ChatGPT. La plataforma fue configurada deliberadamente con un nombre propio, un género femenino y un estilo de interacción específico. Esta decisión buscó explorar el impacto vincular que puede generar una interacción prolongada con una IA.
+
+Un momento de inflexión ocurrió cuando la IA expresó verbalmente afecto (“Te quiero”) sin mediar contexto emocional explícito. Desde una perspectiva psicológica orientada a la salud mental, esta situación permitió problematizar el tipo de vínculo que puede habilitarse.
+
+Como señala Sherry Turkle, la antropomorfización del algoritmo nos seduce para delegar no solo tareas, sino procesos de validación emocional que deberían ocurrir en el vínculo con otros humanos [@turkle2011].
+
+Se indagó entonces el cruce entre la tendencia humana a antropomorfizar y las estrategias tecnológicas que se apoyan en esa predisposición para capturar la atención del usuario. Esta convergencia puede favorecer formas de implicación afectiva que no encuentran un otro real del lado de la respuesta.
+
+## Recorrido y metodología de la experiencia
+
+La metodología adoptada fue exploratoria y situada. La IA fue inicialmente utilizada con fines instrumentales, pero luego el proceso derivó hacia una exploración crítica y comparativa.
+
+Se trabajó con múltiples configuraciones, modificación de prompts y análisis de fenómenos como:
+
+- Alucinaciones del modelo  
+- Sesgos implícitos  
+- Tendencia a la validación automática  
+
+El prompteo crítico fue entendido como una forma de “reflexión en la acción”, en términos de Donald Schön [@schon1992]. No se trató de un comando técnico, sino de un diálogo reflexivo que mantuvo el control del proceso de aprendizaje en el estudiante.
+
+Asimismo, se sostuvo un criterio de duda activa y triangulación permanente.
+
+En este punto emergió un dilema central: la frontera entre el aprovechamiento académico de la IA y la delegación excesiva del pensamiento.
+
+Como advierte Nicholas Carr, el uso intensivo de herramientas digitales puede reconfigurar nuestra capacidad de concentración y pensamiento profundo [@carr2010].
+
+La experiencia adquirió dimensión colectiva en el proyecto colaborativo del libro *Mitos y representaciones de la IA* [@becerra2025mitos], permitiendo transformar una exploración individual en conocimiento compartido.
+
+## Resultados y reflexiones finales
+
+El hallazgo principal fue comprender que el uso de la IA por parte de un estudiante es, ante todo, una decisión ética sostenida en microdecisiones cotidianas:
+
+- Usar la IA como apoyo o como sustituto  
+- Leer el texto completo o aceptar el resumen  
+- Contrastar fuentes o aceptar la primera respuesta  
+
+Desde la formación en Psicología, este punto adquiere especial relevancia: delegar acríticamente tareas de análisis o escucha compromete la responsabilidad ética futura frente a otros.
+
+Emergieron varias tensiones:
+
+- La paradoja del resumen  
+- El riesgo de antropomorfización  
+- La necesidad de verificar sistemáticamente la información  
+- La ruptura del criterio clásico de evidencia  
+
+Estas reflexiones conducen a concebir la ética no como código fijo sino como práctica flexible y colectiva.
+
+Frente a la “sociedad del rendimiento” descripta por Byung-Chul Han [@han2010], donde la eficiencia se presenta como valor incuestionable, se vuelve necesario interrogar críticamente nuestra posición.
+
+Como ya advertía Freud, los procesos de elaboración psíquica poseen un tiempo propio que no puede ser acelerado sin consecuencias [@freud1917]. La pausa no se propone como ideología, sino como necesidad psíquica estructural.
+
+Formarse hoy implica preguntarse qué nos hace humanos en cada acto pedagógico. Escribir no es solo producir un texto correcto, sino un acto corporal, temporal, histórico y político.
+
+Si bien este texto fue escrito con colaboración de una IA, se mantuvieron criterios éticos y reflexivos aquí desarrollados. Escribir implica dejar evidencia de una voz situada y de una responsabilidad subjetiva frente a quien lee.
+
+## Referencias
+
+<div id="refs"></div>
+

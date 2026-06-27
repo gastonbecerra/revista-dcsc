@@ -1,0 +1,7 @@
+lib/
+.Rhistory
+.Rproj.user/
+*.Rproj
+custom-head.html
+sources/
+outputs/

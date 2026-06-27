@@ -1,0 +1,48 @@
+{
+  "title_sp": "Ética del estudiante frente a la IA: Una reflexión desde la psicología",
+  "title_en": "Student Ethics in the Face of AI: A Reflection from Psychology",
+
+  "abstract_sp": "Este artículo presenta una reflexión situada sobre el uso de IA generativa en el ámbito educativo, a partir de la experiencia personal como estudiante de Psicología. A través de la exploración crítica de distintas herramientas de IA se analizan efectos subjetivos, cognitivos y éticos de su incorporación en los procesos de aprendizaje. El trabajo articula experiencia individual, metodología autorreflexiva y contrastación colectiva, poniendo en tensión el uso instrumental de estas tecnologías y los riesgos de delegación del pensamiento. Finalmente, se propone una ética del uso de la IA basada en la pausa, la reflexión crítica y la responsabilidad formativa.",
+
+  "abstract_en": "This article presents a situated reflection on the use of generative AI in educational contexts, based on the personal experience of a Psychology student. Through a critical exploration of different AI tools, the paper analyzes subjective, cognitive, and ethical effects of their incorporation into learning processes. The work combines individual experience, self-reflective methodology, and collective contrast, questioning instrumental uses of AI and the risks of delegating thinking. Finally, it proposes an ethics of AI use grounded in pause, critical reflection, and formative responsibility.",
+
+  "keywords_sp": [
+    "Inteligencia artificial generativa",
+    "Ética",
+    "Formación universitaria",
+    "Psicología"
+  ],
+
+  "keywords_en": [
+    "Generative artificial intelligence",
+    "Ethics",
+    "University education",
+    "Psychology"
+  ],
+
+  "authors_name": ["Carla Daniela Avila"],
+  "authors_affiliation": ["Universidad de Flores"],
+  "authors_orcid": ["https://orcid.org/0009-0009-3002-033X"],
+  "authors_email": [
+    "avila.carlad@gmail.com",
+    "carla.avila@uflouniversidad.edu.ar"
+  ],
+
+  "language": ["es"],
+  "type": "Text.Serial.Journal",
+  "format": ["application/pdf", "text/html"],
+
+  "source": "Desarrollos en ciencias sociales computacionales",
+  "publisher": "Universidad de Flores, Argentina",
+  "section": "Artículos de investigación",
+  "source_volume": "1",
+  "source_issue": "1",
+  "source_issn": "",
+  "identifier": "",
+  "identifier_uri": "",
+  "pages": "",
+
+  "date_created": "2025-11-30",
+  "date_issued": "2026-2-25",
+  "date_modified": "2026-2-27"
+}

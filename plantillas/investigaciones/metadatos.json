@@ -1,0 +1,42 @@
+{
+  "title_sp": "Título del artículo en español",
+  "abstract_sp": "Resumen del artículo en español.",
+  "keywords_sp": ["palabra clave 1", "palabra clave 2", "palabra clave 3"],
+
+  "title_en": "Article title in English",
+  "abstract_en": "Abstract of the article in English.",
+  "keywords_en": ["keyword 1", "keyword 2", "keyword 3"],
+
+  "authors_name": "Nombre del autor",
+  "authors_affiliation": "Institución, País",
+  "authors_orcid": "https://orcid.org/0000-0000-0000-0000",
+  "authors_email": "email@institucion.edu",
+
+  "language": "es",
+  "type": "Text.Serial.Journal",
+  "format": ["application/pdf", "text/html"],
+
+  "repository_url": "",
+  "readme_url": "",
+  "archive_url": "",
+  "documentation_url": "",
+  "vignette_url": "",
+  "demo_url": "",
+  "website_url": "",
+
+  "techonologies": [],
+
+  "source": "Desarrollos en ciencias sociales computacionales",
+  "publisher": "Universidad de Flores, Argentina",
+  "section": "Artículos de investigación",
+  "source_volume": "",
+  "source_issue": "",
+  "source_issn": "en trámite",
+  "identifier": "",
+  "identifier_uri": "",
+  "pages": "",
+
+  "date_created": "",
+  "date_issued": "",
+  "date_modified": ""
+}

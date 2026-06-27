@@ -1,0 +1,28 @@
+{
+  "title_sp": "“No te sentís juzgado como puede pasar con una persona”. Un acercamiento a los usos de la IA con fines de ayuda psicológica",
+  "title_en": "“You don’t feel judged as you might if you were speaking with a human being”. An approach to the use of AI for psychological support",
+  "abstract_sp": "El uso de chatbots como herramienta para la ayuda psicológica es un fenómeno creciente tanto a nivel global como local. A partir del análisis de encuestas a habitantes de la Ciudad Autónoma de Buenos Aires y de la Provincia de Buenos Aires (N = 420), se realizó un estudio exploratorio para dimensionar y caracterizar los usos que hace la población de los chatbots de IA generativa de propósito general con fines vinculados con la ayuda psicológica. Desde este abordaje se busca responder a las preguntas: ¿Qué tan frecuente es el uso de chatbots en cuestiones vinculadas con la salud mental y el bienestar psicológico para este territorio? ¿Qué características tiene su uso? ¿Cómo se relaciona el uso de chatbots IA con el uso de servicios de ayuda psicológica  profesional? Entre los principales hallazgos del estudio se destacan un creciente uso de la IA que convive con una valoración positiva de los servicios profesionales ya establecidos y posibilidades de una relación de complementariedad entre el uso de la IA y los servicios profesionales existentes.",
+  "abstract_en": "The use of chatbots as a resource for psychological support is increasing internationally as well as locally. From the analysis of online survey responses from residents of Ciudad Autónoma de Buenos Aires and Provincia de Buenos Aires (N = 420), an exploratory study was elaborated to measure and characterize the use of general-purpose, generative AI-powered, chatbots by the population for psychological support. The research questions approached were: How frequent is the use of chatbots for psychological support in that region? What are the characteristics of this use? What kind of relationships exist between AI chatbot use and the already existing use of mental health services? Some insights of this study are the growing use of AI chatbots for psychological goals, coinciding with positive regard towards psychological help professionals, and with that trend, possibilities for a complementary relationship between A.I. users and help professionals.",
+  "keywords_sp": ["chatbot", "inteligencia artificial generativa", "modelo de lenguaje", "salud mental", "bienestar psicológico", "ayuda psicológica"],
+  "keywords_en": ["chatbot", "generative artificial intelligence", "large language model", "mental health", "psychological wellbeing", "psychological support"],
+  "authors_name": ["Juan Martín Bello", "Juan Pablo De Ortuzar", "María Laura Legname", "Marcos Wolff"],
+  "authors_affiliation": ["Generación para el Desarrollo, Argentina", "Generación para el Desarrollo, Argentina", "Generación para el Desarrollo, Argentina", "Generación para el Desarrollo, Argentina"],
+  "authors_orcid": ["https://orcid.org/0000-0001-5653-3461", "https://orcid.org/0009-0006-6168-1593", "https://orcid.org/0009-0006-2554-9704", "https://orcid.org/0009-0003-7811-2299"],
+  "authors_email": ["jmbello@live.com.ar", "deortuzar.juanpi@gmail.com", "lauralegname2@gmail.com", "wmarcos@gmail.com"],
+  "language": ["es"],
+  "type": "Text.Serial.Journal",
+  "format": ["application/pdf", "text/html"],
+
+  "source": "Desarrollos en Ciencias Sociales Computacionales",
+  "publisher": "Univesidad de Flores",
+  "source_volume": "1",
+  "source_issue": "1",
+  "source_issn": "En trámite",
+  "pages": "e8",
+  "identifier": "MISSING",
+  "identifier_uri": "MISSING",
+
+  "date_created": "2026-02-01",
+  "date_issued": "2026-06-18",
+  "date_modified": "2026-06-24"
+}

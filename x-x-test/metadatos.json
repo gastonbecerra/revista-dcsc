@@ -1,0 +1,42 @@
+{
+  "title_sp": "Artículo de ejemplo: test de la plantilla",
+  "abstract_sp": "Este es un artículo de ejemplo para probar la estructura del repositorio y el flujo de trabajo con RMarkdown.",
+  "keywords_sp": ["ejemplo", "plantilla", "rmarkdown", "dcsc"],
+
+  "title_en": "Example article: template test",
+  "abstract_en": "This is an example article to test the repository structure and the RMarkdown workflow.",
+  "keywords_en": ["example", "template", "rmarkdown", "dcsc"],
+
+  "authors_name": "Test Autor",
+  "authors_affiliation": "Universidad de Ejemplo, Argentina",
+  "authors_orcid": "https://orcid.org/0000-0000-0000-0000",
+  "authors_email": "test@ejemplo.edu",
+
+  "language": "es",
+  "type": "Text.Serial.Journal",
+  "format": ["application/pdf", "text/html"],
+
+  "repository_url": "",
+  "readme_url": "",
+  "archive_url": "",
+  "documentation_url": "",
+  "vignette_url": "",
+  "demo_url": "",
+  "website_url": "",
+
+  "techonologies": [],
+
+  "source": "Desarrollos en ciencias sociales computacionales",
+  "publisher": "Universidad de Flores, Argentina",
+  "section": "Artículos de investigación",
+  "source_volume": "X",
+  "source_issue": "X",
+  "source_issn": "en trámite",
+  "identifier": "",
+  "identifier_uri": "",
+  "pages": "e0",
+
+  "date_created": "2026-06-27",
+  "date_issued": "2026-06-27",
+  "date_modified": "2026-06-27"
+}

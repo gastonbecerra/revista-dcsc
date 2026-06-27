@@ -1,0 +1,53 @@
+---
+title: "Revista Desarrollos en Ciencias Sociales Computacionales"\r\nknit: (function(inputFile, ...) {
+  rmarkdown::render(inputFile, output_dir = "outputs", ...)
+})
+output:
+  html_document:
+    self_contained: true
+    theme: null
+    mathjax: null
+    highlight: tango
+    includes:
+      in_header: "custom-head.html"
+  word_document: default
+  pdf_document: 
+    latex_engine: xelatex
+    keep_tex: true
+    highlight: tango
+bibliography: referencias.bib
+csl: ../../template/apa.csl
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{Fira Sans Condensed}
+---
+
+
+```{r header, echo=FALSE, results='asis'}
+source("../../template/header.R")
+```
+
+## Introducción
+
+Escribe aquí la introducción del artículo.
+
+## Metodología
+
+Describe la metodología utilizada.
+
+## Resultados
+
+Presenta los resultados del estudio.
+
+## Discusión
+
+Discute los resultados en relación con otros trabajos.
+
+## Conclusiones
+
+Escribe aquí las conclusiones.
+
+## Referencias
+
+<div id="refs"></div>
+

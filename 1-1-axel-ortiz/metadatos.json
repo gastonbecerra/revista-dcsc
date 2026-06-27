@@ -1,0 +1,66 @@
+{
+  "title_sp": "Entre Reflexión Crítica y Procesamiento de Datos: Una experiencia de Estudiantes con IA en Filosofía",
+  "abstract_sp": "En el siguiente estudio analizamos el uso de la Inteligencia Artificial (IA) como herramienta digital, dentro del ámbito educativo. A partir de una experiencia realizada desde el Profesorado de Filosofía en la materia Iniciación a la Lectura y Escritura Filosófica, trabajamos el tema tecnología considerando su evolución. En nuestro rol como estudiantes de primer año vivenciamos su implementación en el espacio educativo mediante diferentes instancias en donde consignas flexibles permitieron una interacción directa con la propia herramienta, experimentando desde una posición crítico-constructivo sobre sus posibilidades pedagógicas, sus limitaciones y qué rol le asignamos en la producción y uso del conocimiento.",
+  "keywords_sp": ["Inteligencia Artificial", "educación", "tecnología", "filosofía"],
+
+  "title_en": "Between Critical Reflection and Data Processing: A Student Experience with AI in Philosophy",
+  "abstract_en": "In the present study, we analyze the use of Artificial Intelligence (AI) as a digital tool in the academic field, based on an experience carried out in the Philosophy Teacher Training program in the subject Introduction to Philosophical Reading and Writing. We worked on the topic of technology considering its evolution. In our role as first-year students, we experienced its implementation in the educational setting through different instances where flexible assignments allowed for direct interaction with the tool itself, experimenting from a critical-constructive position on its pedagogical possibilities, its limitations, and what role we assign it in the production and use of knowledge.",
+  "keywords_en": ["Artificial Intelligence", "education", "technology", "philosophy"],
+
+  "authors_name": [
+    "Axel Ortiz",
+    "Nahuel Roldán",
+    "Sonia Díaz",
+    "Yanina Insaurralde",
+    "Pilar Mastrocola"
+  ],
+  "authors_affiliation": [
+    "Instituto Don Bosco, Argentina",
+    "Instituto Don Bosco, Argentina",
+    "Instituto Don Bosco, Argentina",
+    "Instituto Don Bosco, Argentina",
+    "Instituto Don Bosco, Argentina"
+  ],
+  "authors_orcid": [
+    "https://orcid.org/0009-0000-6780-9953",
+    "https://orcid.org/0009-0006-3818-8274",
+    "https://orcid.org/0009-0009-1892-3472",
+    "https://orcid.org/0009-0006-0431-1190",
+    "https://orcid.org/0009-0005-2893-0450"
+  ],
+  "authors_email": [
+    "axeljesusok@gmail.com",
+    "roldannahuelj@gmail.com",
+    "soniardiaz900@gmail.com",
+    "yaniinsaurralde.6@gmail.com",
+    "pilimastro2006@gmail.com"
+  ],
+
+  "language": ["es", "en"],
+  "type": "Text.Serial.Journal",
+  "format": ["application/pdf", "text/html"],
+
+  "repository_url": "",
+  "readme_url": "",
+  "archive_url": "",
+  "documentation_url": "",
+  "vignette_url": "",
+  "demo_url": "",
+  "licence_url": "",
+
+  "technologies": [],
+
+  "source": "Desarrollos en ciencias sociales computacionales",
+  "publisher": "Universidad de Flores, Argentina",
+  "section": "Dossier",
+  "source_volume": "1",
+  "source_issue": "1",
+  "source_issn": "",
+  "identifier": "",
+  "identifier_uri": "",
+  "pages": "",
+
+  "date_created": "2025-11-10",
+  "date_issued": "2025-12-18",
+  "date_modified": "2025-12-18"
+}

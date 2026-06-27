@@ -1,0 +1,160 @@
+---
+title: "Revista Desarrollos en Ciencias Sociales Computacionales"\r\nknit: (function(inputFile, ...) {
+  rmarkdown::render(inputFile, output_dir = "outputs", ...)
+})
+output:
+  html_document:
+    self_contained: true
+    theme: null
+    mathjax: null
+    highlight: tango
+    includes:
+      in_header: "custom-head.html"
+  word_document: default
+  pdf_document: 
+    latex_engine: xelatex
+    keep_tex: true
+    highlight: tango
+bibliography: referencias.bib
+csl: ../template/apa.csl
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{Fira Sans Condensed}
+---
+
+
+```{r header, echo=FALSE, results='asis'}
+source("../template/header.R")
+```
+
+## Introducción
+
+En los últimos años, el desarrollo y la masificación de tecnologías basadas en inteligencia artificial (IA) han reconfigurado múltiples aspectos de la vida social, desde los espacios laborales y educativos hasta los vínculos cotidianos y las formas de producción simbólica. En este contexto, proliferan discursos que varían entre la fascinación tecnológica y la alerta distópica, generando un campo de sentido marcado por la ambivalencia, la incertidumbre y la especulación. 
+
+Como advierten [@becerra_magnani2024], estos discursos configuran formas de representación social de la IA que no sólo moldean la opinión pública, sino que también condicionan sus modos de adopción, regulación e incluso comprensión pedagógica. En su trabajo, los autores identifican cinco sentidos predominantes en torno a la inteligencia artificial: como utopía o distopía, como robot antropomórfico, como inteligencia (no humana), como revolución del conocimiento y como el fin del trabajo. Estos sentidos, lejos de ser neutrales, se constituyen en obstáculos epistemológicos [@bachelard2000] que simplifican las preguntas posibles sobre la tecnología, desplazando la mirada de los contextos, relaciones e intereses que la sostienen. Frente a este desafío, resulta crucial habilitar espacios formativos que no sólo enseñen sobre IA, sino que permitan explorar críticamente los imaginarios que la rodean.
+
+Este artículo se propone contribuir a esta tarea a partir del análisis de una experiencia pedagógica realizada con estudiantes de posgrado del ámbito de la salud y la educación en el contexto de una especialización en docencia universitaria. La propuesta consistió en diseñar y generar imágenes con IA generativa (DALL·E, ChatGPT, Canva, entre otras) que representaran uno de los discursos sociales sobre la IA propuestos por Becerra y Magnani, acompañadas por una reflexión escrita desde la perspectiva profesional de cada estudiante. A partir del corpus reunido, compuesto por imágenes, prompts y reflexiones, se indagó cómo se apropian, reconfiguran o tensionan esos sentidos sociales desde prácticas situadas, qué valoraciones emergen con la relación a la IA, y qué potencial pedagógico habilitan este tipo de experiencias. Este trabajo, entonces, no busca evaluar la “veracidad” de los discursos sobre IA, sino documentar su circulación e implicancias en la formación crítica de profesionales.
+
+## Marco teórico
+
+El artículo parte de las premisas planteadas por [@becerra_magnani2024], en el cual proponen una sistematización de cinco sentidos sociales predominantes en torno a la inteligencia artificial: IA como utopía/distopía, IA como robot antropomórfico, IA como inteligencia, IA como revolución del conocimiento, e IA como fin del trabajo. Estos sentidos, más que meras descripciones, funcionan como estructuras narrativas que condensan expectativas, temores y valoraciones culturales sobre la tecnología, ancladas en repertorios de la ciencia ficción, el solucionismo tecnológico y la crítica social [@becerra_magnani2024].
+
+Tal como señalan los autores, estos discursos tienden a operar como obstáculos epistemológicos que impiden una comprensión situada y relacional de los sistemas de IA, ocultando las condiciones sociales, políticas y económicas que intervienen en su desarrollo. En este marco, la crítica no se orienta a disputar la validez de los discursos, sino a desplazar la mirada hacia los contextos de producción, aplicación y regulación.
+
+Desde el campo de los estudios sociales de la ciencia y la tecnología (CTS), esta perspectiva encuentra múltiples resonancias. Lejos de concebir la IA como una entidad autónoma, neutral o inevitable, el enfoque CTS propone entenderla como un artefacto sociotécnico, es decir, como el resultado de procesos de diseño, negociación y estabilización que involucran tanto a actores humanos como no humanos [@latour2005; @bijker_hughes_pinch1987]. En particular, el enfoque de la construcción social de la tecnología (SCOT) destaca que los artefactos no tienen significados fijos, sino que éstos se definen en función de los grupos sociales relevantes que interactúan con ellos [@bijker1995]. En este sentido, los discursos sociales sobre la IA no son meras opiniones o metáforas, sino formas activas de coproducción del significado tecnológico [@jasanoff2004]. Es así como el sentido de la IA como “inteligente” o “revolucionaria” no está dada de antemano, sino que se negocia en espacios como los medios, las políticas públicas o, como este artículo propone, se explora en el aula.
+
+El concepto de imaginario sociotécnico [@jasanoff_kim2015] resulta clave para poder comprender cómo los discursos sobre la IA moldean no sólo la percepción social, sino también las formas de desarrollo e implementación tecnológica. Los imaginarios sociotécnicos son representaciones colectivas de futuros deseables o temidos, animadas por visiones compartidas del progreso científico y tecnológico. Estos imaginarios operan como guías normativas, orientando tanto las decisiones técnicas como las expectativas culturales.
+
+Desde esta perspectiva, las imágenes generadas por IA en la experiencia analizada pueden leerse como cristalizaciones de imaginarios en circulación. La representación de robots médicos, asistentes virtuales o terapias automatizadas no son neutrales: expresan visiones particulares sobre el futuro del trabajo, la atención en salud, la afectividad y la tecnificación de lo humano. Al mismo tiempo, las reflexiones escritas por los estudiantes muestran intentos de reapropiación crítica, en diálogo con su experiencia profesional y con las tensiones propias de su campo disciplinar.
+
+Siguiendo a [@esposito2022], se propone pensar a la IA como comunicación artificial en lugar de inteligencia artificial; se abre una vía interesante para abordar la dimensión relacional de nuestra interacción con estos sistemas. Desde este enfoque, la IA no simula la inteligencia humana, sino que participa en los procesos comunicativos bajo condiciones estructuralmente distintas: sin cuerpo, sin experiencia, sin memoria situada.
+
+En contextos educativos, esta diferencia se vuelve central. Las aulas no son espacios neutrales, sino lugares donde circulan imaginarios, emociones y formas de relación con la tecnología que no pueden ser obviadas. Como plantean [@dignazio_klein2020], los datos y los algoritmos también tienen género, raza y clase, y enseñar sobre IA sin atender a estos sesgos es reforzar su naturalización. Por eso, integrar estas discusiones en la formación profesional, a través de experiencias permite politizar la mirada tecnológica y habilitar preguntas más complejas.
+
+## Metodología
+
+El trabajo presentado se enmarca en un enfoque cualitativo de tipo exploratorio-interpretativo, orientado a indagar cómo circulan, se resignifican y se problematizan los discursos sociales sobre la IA en contextos de posgrado. Se toma como caso de estudio una experiencia pedagógica desarrollada en el marco de un curso de posgrado vinculado al uso de la IA en el aula, cuyo objetivo fue promover una mirada crítica sobre los imaginarios sociotécnicos que configuran la percepción de la IA entre los profesionales participantes.
+
+### Contexto y participantes
+
+La actividad se implementó en un entorno virtual de enseñanza universitaria, en el que participaron estudiantes provenientes de diversas disciplinas, como psicología, medicina, fonoaudiología, nutrición, y docencia universitaria. En su mayoría, se trató de estudiantes que se encuentran finalizando su especialización y poseen experiencia profesional y en muchos casos experiencia docente, con distintos grados de familiaridad con herramientas de IA generativa.
+
+### Diseño de la propuesta didáctica
+
+La actividad partió de una introducción a los algoritmos generativos, donde se puso de manifiesto conceptos como alucinación, alineación y sesgos. Luego, se continuó con la lectura del artículo de [@becerra_magnani2024], el cual fue un insumo clave para el trabajo autónomo. A partir de este insumo teórico, se propuso a cada estudiante elegir uno de los cinco discursos sociales identificados por los autores (IA como utopía/distopía, robot antropomórfico, inteligencia, revolución del conocimiento o fin del trabajo) y generar una imagen que lo representara visualmente, utilizando una herramienta de IA generativa de imágenes (como DALL·E, ChatGPT, Grok o Canva).
+
+Para ello, debían diseñar un prompt específico que funcionara como consigna para la IA, generar una o más imágenes y acompañarlas de una reflexión escrita breve (100-150 palabras), en la que justificaran su elección discursiva, interpretaran la imagen obtenida y compartieran su perspectiva profesional sobre el rol de la IA en el campo elegido.
+
+Esta propuesta no sólo apuntó a poner en juego saberes técnicos y reflexivos, sino también a activar procesos de apropiación crítica, invitando a los estudiantes a confrontar sus propios imaginarios y a problematizar los modos en que la IA se representa y se piensa desde lo social.
+
+### Estrategia de análisis
+
+El corpus estuvo compuesto por 26 producciones individuales, integradas por tres elementos: el discurso elegido, el prompt utilizado, y la reflexión escrita sobre la imagen generada. A partir de este material, se realizó un análisis temático y se categorizó en tres niveles:
+
+1. Discursos seleccionados: identificación de recurrencias y patrones en la elección de los sentidos propuestos por Becerra y Magnani.
+2. Formas de representación: análisis de las imágenes generadas y del modo en que representan los discursos, incluyendo la aparición de estereotipos, sesgos, antropomorfizaciones o elementos distópicos/utópicos.
+3. Reflexiones críticas: codificación de los textos escritos en torno a categorías como: vínculo humano-tecnología, deshumanización, potencial pedagógico, emocionalidad emergente, agencia profesional y tensiones éticas.
+
+El análisis se nutrió de herramientas propias del enfoque sociotécnico [@latour2005; @jasanoff2004], en especial del concepto de imaginarios sociotécnicos, así como de las nociones de coproducción de sentidos y de mediación simbólica en la construcción de las tecnologías.
+
+Esta estrategia buscó no sólo relevar los discursos más frecuentes, sino también atender a las formas en que los estudiantes reinterpretan, critican o resignifican los sentidos sociales propuestos, desde sus prácticas, saberes y afectos.
+
+## Análisis de resultados
+
+El análisis del corpus permitió identificar una serie de patrones discursivos, representacionales y emocionales que ponen en juego los sentidos sociales de la IA en el espacio formativo. A continuación, se presentan los principales hallazgos organizados en torno a cuatro dimensiones analíticas: discursos predominantes, formas de representación visual, tensiones éticas y profesionales, y resignificaciones críticas.
+
+### 1. Discursos predominantes: entre el fin del trabajo y la humanización
+
+De los cinco sentidos propuestos por [@becerra_magnani2024], el más elegido fue el de la IA como fin del trabajo, seguido por IA como robot antropomórfico. Esta doble selección refleja una preocupación extendida por los efectos deshumanizantes de la automatización, especialmente en profesiones donde el vínculo interpersonal es central. En menor medida, se exploraron los discursos de IA como inteligencia y IA como revolución del conocimiento, y sólo en casos puntuales apareció el eje utopía/distopía.
+
+Este patrón sugiere que, más allá del atractivo mediático de las distopías tecnológicas, los estudiantes tienden a representar la IA en relación directa con sus prácticas profesionales, centrándose en aquello que consideran más amenazado: la especificidad del trabajo humano, el juicio clínico, la afectividad y el vínculo pedagógico o terapéutico.
+
+Como ejemplo de los discursos, se puede destacar:
+
+- "Quiero que crees una imagen que represente a la Inteligencia Artificial, en forma de robot antropomórfico, reemplazando el trabajo de un nutricionista, en la consulta con un paciente adulto"
+- "Graficar un paciente en su primer día de tratamiento de radioterapia, rodeado de robots, en vez de profesionales de la salud. Acostado en la camilla, asustado y con incertidumbre"
+- "Crear una imagen donde la IA reemplaza al profesional fonoaudiólogo que realiza tratamiento a un niño estimulando su lenguaje de manera eficiente"
+- "necesito que crees una imagen, donde se represente la inteligencia artificial haciendo el trabajo de un enfermero; en una sala de terapia intensiva, la inteligencia artificial realizando procesamiento de datos, sugerencias de tratamiento, y el humano enfermero, realizando tareas manuales que la inteligencia artificial no puede realizar. en el centro de la escena, el paciente recibiendo la atención hibrida."
+
+### 2. Formas de representación: persistencia de lo antropomórfico
+
+Aún cuando el discurso elegido no apelaba explícitamente a la figura del robot, la mayoría de las imágenes generadas incluyó representaciones antropomórficas de la IA, generalmente en forma de humanoides médicos, docentes o terapeutas. Este dato refuerza lo planteado por [@becerra_magnani2024] respecto a la centralidad del robot en el imaginario popular, pero también dialoga con [@szollosy2017], quien sostiene que los robots nos confrontan con proyecciones sobre lo que perdemos como humanos: empatía, juicio, control.
+
+Desde una perspectiva CTS, esto puede interpretarse como la manifestación de un imaginario sociotécnico arraigado, que asocia IA con un cuerpo visible, a pesar de que las herramientas basadas en IA que se utilizan cotidianamente operan como interfaces textuales sin corporeidad. La herramienta genera así una tensión entre la forma materializada de la imagen y el funcionamiento real del sistema.
+
+### 3. Tensiones éticas, afectivas y profesionales
+
+Las reflexiones escritas dan cuenta de un repertorio afectivo complejo, marcado por la ambivalencia. Aparecen emociones como el miedo (a ser reemplazado/a, a la despersonalización de los cuidados), la fascinación (por las posibilidades de mejora y eficiencia), y la desconfianza (hacia la capacidad de la IA de actuar en contextos sensibles).
+
+En términos éticos, las preocupaciones más frecuentes giraron en torno a la pérdida de la dimensión humana en tareas clínicas, pedagógicas o comunitarias. Los estudiantes destacaron que su labor no se agota en procedimientos o decisiones técnicas, sino que requiere empatía, escucha, creatividad y capacidad de adaptación al contexto: dimensiones que la IA, tal como hoy se concibe, no puede replicar.
+
+En las producciones puede visualizarse en algunos aportes:
+
+- "necesitamos interactuar con el paciente poniendo en práctica ciertas habilidades sociales, para crear un vínculo profesional-consultante y también manejar cierta pedagogía para explicar conceptos técnicos y científicos llevados a lenguaje más coloquial, que un robot no podría lograr"
+- "La imagen generada muestra cómo la inteligencia artificial puede acompañarnos en la toma de decisiones, brindando datos y sugerencias en tiempo real. Sin embargo, también nos invita a reflexionar críticamente: ¿qué lugar dejamos al juicio clínico humano?"
+- "La medicina, la educación, como así otras profesiones, requieren de una serie de capacidades y cualidades profundamente ligadas a la condición humana, que hasta el momento, la IA no ha podido resolver, entre ellas la empatía, conexión emocional, intuición, adaptabilidad, entre otras."
+
+### 4. Resignificaciones críticas desde la práctica situada
+
+Si bien algunas imágenes reforzaron estereotipos o metáforas simplificadas, las reflexiones escritas mostraron una capacidad notable de reapropiación crítica. Los estudiantes no se limitaron a reproducir los discursos propuestos, sino que los interpretaron desde su campo disciplinar, los tensionaron con la experiencia profesional, y en muchos casos, los reconfiguraron.
+
+En varias producciones se propuso una coexistencia colaborativa entre humanos y máquinas, donde la IA actúa como asistente, facilitador o complemento, pero no como sustituto. En otras, se denunció explícitamente la falta de calidez, empatía o comprensión emocional en los sistemas automatizados, cuestionando su aplicabilidad ética.
+
+Algunas propuestas incluso imaginaron futuros inclusivos o equitativos, como una imagen donde una IA holográfica asiste desde el fondo en un espacio comunitario diverso, sin reemplazar la labor humana. Estas escenas sugieren que, al problematizar los imaginarios, se abre un espacio para pensar otras configuraciones posibles de la relación humano-tecnología.
+
+## Discusión
+
+Los resultados analizados muestran que los discursos sociales sobre la IA no sólo circulan en el ámbito académico o mediático, sino que se encarnan, se proyectan y se disputan activamente en los espacios formativos, especialmente cuando se habilitan dispositivos pedagógicos que invitan a la reflexión situada. En este sentido, la experiencia relatada permite aportar evidencias al planteo de [@becerra_magnani2024], mostrando cómo sus cinco sentidos se expresan con fuerza en la imaginación profesional de quienes se están formando en campos sensibles como la salud y la educación.
+
+Uno de los hallazgos más relevantes es la preeminencia del discurso “IA como fin del trabajo”, no sólo como expresión de temor, sino como punto de entrada para discutir qué es lo específicamente humano en el quehacer profesional. La pérdida de empleos no es temida sólo por razones económicas, sino porque amenaza con erosionar dimensiones éticas y afectivas que constituyen la identidad del rol: la empatía en la psicología, el juicio clínico en la medicina, el vínculo pedagógico en la docencia. Esta preocupación se encuentra en línea con los análisis de [@jasanoff2004] y [@miceli2023], quienes destacan que las tecnologías digitales pueden operar como mecanismos de disciplinamiento o desvalorización del trabajo humano, especialmente en contextos precarizados.
+
+A su vez, la omnipresencia del robot antropomórfico como figura representacional dominante refuerza la necesidad, señalada desde el enfoque CTS, de problematizar los imaginarios técnicos que estructuran nuestra comprensión de la IA. Esta insistencia visual, incluso cuando no es solicitada por el prompt, muestra que las tecnologías generativas de imagen no sólo producen, sino que reproducen sentidos sociales previamente naturalizados, lo que plantea interrogantes sobre la autonomía creativa y los sesgos incorporados en las herramientas.
+
+En contraposición a estas imágenes estandarizadas, las reflexiones escritas de los estudiantes evidenciaron una capacidad crítica significativa. Lejos de asumir la IA como una amenaza inevitable o como un paraíso neutral, muchas respuestas pusieron en primer plano el contexto, los vínculos y las condiciones de aplicación. Esta capacidad de reflexión situada es consistente con la propuesta de [@jasanoff_kim2015], quienes entienden que los imaginarios sociotécnicos no son solo proyecciones de futuro, sino prácticas actuales de construcción del mundo. En este caso, los estudiantes no sólo interpretaron las imágenes, sino que las reinscribieron en sus saberes profesionales, generando contranarrativas que desafían el solucionismo tecnológico y abren la posibilidad de una tecnología ética, contextual y co-diseñada.
+
+Desde una perspectiva educativa, la experiencia permite afirmar que el uso de IA generativa puede ser un recurso pedagógico potente para activar una mirada crítica, siempre que se articule con dispositivos de análisis, reflexión y diálogo. Las tecnologías no deben ser incorporadas al aula únicamente como herramientas funcionales, sino como objetos de problematización, capaces de revelar tensiones éticas, políticas y epistémicas.
+
+Finalmente, los hallazgos sugieren que la pedagogía crítica de la tecnología requiere integrar lo simbólico y lo afectivo, reconociendo que los discursos sobre la IA no son neutrales ni universales, sino que están mediados por historias, profesiones, desigualdades y expectativas. La alfabetización tecnológica, en este marco, no puede reducirse a un aspecto técnico: debe incluir también la alfabetización simbólica, que permita leer, cuestionar y resignificar los sentidos que atribuimos a lo artificial.
+
+## Conclusión
+
+A lo largo de este trabajo se analizaron cómo los discursos sociales sobre la IA circulan, se apropian y se resignifican en una experiencia formativa que integró herramientas de IA generativa visual con dispositivos de reflexión crítica. Lejos de ser construcciones teóricas abstractas, los sentidos abordados (la IA como utopía, robot, inteligencia, revolución del conocimiento o fin del trabajo) se revelaron como estructuras vivas del imaginario profesional de los estudiantes en formación.
+
+Uno de los principales hallazgos fue la centralidad del discurso “IA como fin del trabajo”, en diálogo con una preocupación transversal por la pérdida de agencia, el deterioro del vínculo humano y la desvalorización de saberes profesionales. Esta inquietud, lejos de expresar un simple rechazo tecnológico, expone una comprensión profunda de lo que está en juego cuando se automatizan dimensiones sensibles de la práctica profesional: la empatía, la toma de decisiones contextual y el cuidado. En este sentido, los estudiantes mostraron una notable capacidad de lectura crítica y situada, tensionando los imaginarios dominantes desde sus propias disciplinas.
+
+Asimismo, el análisis puso en evidencia la persistencia de formas visuales estandarizadas, especialmente la figura del robot antropomórfico, incluso en discursos que no la invocaban explícitamente. Esto reafirma la necesidad de alfabetizar no sólo en el uso, sino también en la lectura crítica, entendiendo que las imágenes producidas por IA no son neutrales, sino que materializan sesgos e imaginarios sociales arraigados.
+
+Desde una perspectiva pedagógica, la experiencia confirma que el trabajo con IA generativa puede habilitar espacios formativos de gran valor crítico, siempre que se acompañe de dispositivos que promuevan el análisis, el diálogo interdisciplinario y la problematización ética. Este tipo de propuestas didácticas no sólo forman en competencias tecnológicas, sino que forman en la pregunta, activando capacidades reflexivas necesarias para habitar un mundo atravesado por algoritmos.
+
+De cara al futuro, se consideran relevantes profundizar en tres líneas:
+
+- Investigar cómo estos imaginarios varían según disciplinas, trayectorias profesionales o contextos institucionales.
+- Incorporar las voces docentes para ampliar la mirada sobre la incorporación crítica de IA en la enseñanza.
+- Explorar la construcción colectiva de contra-imaginarios: futuros alternativos de convivencia con tecnologías que no estén definidos por la amenaza o la fascinación, sino por la justicia y la inclusión.
+
+En un contexto donde los sistemas de IA se integran crecientemente en la vida social y educativa, generar espacios de reflexión situada es, a la vez, un acto pedagógico, ético y político.
+
+## Referencias
+
+<div id="refs"></div>
+

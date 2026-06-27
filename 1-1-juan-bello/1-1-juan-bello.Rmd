@@ -1,0 +1,307 @@
+---
+title: "Revista Desarrollos en Ciencias Sociales Computacionales"\r\nknit: (function(inputFile, ...) {
+  rmarkdown::render(inputFile, output_dir = "outputs", ...)
+})
+output:
+  html_document:
+    self_contained: true
+    theme: null
+    mathjax: null
+    highlight: tango
+    includes:
+      in_header: "custom-head.html"
+  word_document: default
+  pdf_document: 
+    latex_engine: xelatex
+    keep_tex: true
+    highlight: tango
+bibliography: referencias.bib
+csl: ../template/apa.csl
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{Fira Sans Condensed}
+---
+
+
+```{r header, echo=FALSE, results='asis'}
+source("../template/header.R")
+```
+
+## Introducción
+
+El presente trabajo surgió a raíz de inquietudes personales en torno al uso de chatbots por parte de la población argentina. A partir del registro de casos conocidos en los que chatbots de IA generativa y de uso general eran empleados para solicitar consejos, compartir vivencias, buscar compañía o apoyo con problemas personales[^1], surgió el interés por conocer en qué medida estas prácticas, a saber, el uso de chatbots con fines de bienestar psicológico, se encuentran extendidas en el Área Metropolitana de Buenos Aires. Dicho interés fue motivado también por la escasez de estudios locales que aborden el fenómeno. A lo largo de la propia investigación, la cual consistió en la realización de encuestas autoadministradas a través de un formulario online, se buscó responder a las preguntas *¿Cuán difundido se encuentra en Argentina el uso de chatbots IA para cuestiones vinculadas con la salud mental y el bienestar psicológico?* En los casos en los que esto ocurre, *¿qué características tiene este uso? ¿Cómo se articulan este tipo de prácticas con el uso de servicios de ayuda psicológica profesionales?*
+
+En los siguientes apartados se detallan la perspectiva teórica adoptada, algunos de los principales estudios que abordaron el fenómeno en otros lugares y la estrategia metodológica empleada en la propia investigación. Luego de esto, se exponen las características que asume la adopción de la IA como herramienta para la ayuda psicológica en la población estudiada. En las secciones posteriores se abordan los modos en que se vinculan en este escenario los servicios psicológicos profesionales y se explora, a su vez, la relación entre chatbots y los servicios profesionales (entre los que se destacan, la psicoterapia, la psiquiatría y el counseling) observando las posibilidades de complementariedad. En las consideraciones finales, se presentan oportunidades y precauciones a considerar hacia el futuro.
+
+Para el propio abordaje se recupera la perspectiva teórica adoptada por Sherry Turkle [-@turkle2011] en su estudio de las interacciones que las personas mantienen con objetos tecnológicos que, en uno u otro sentido, emulan alguna cualidad del contacto con otros seres humanos. Según la autora, las herramientas creadas por el ser humano también moldean su conducta, alentando en la práctica determinadas formas de comportarse y vincularse. Turkle realiza una reconstrucción histórica que inicia con el programa de computación ELIZA, creado en el Instituto Tecnológico de Massachusetts (MIT, por sus siglas en inglés) en los años sesenta, el cual, a través de un esquema básico de repreguntas, simulaba la conversación con una persona humana. A pesar de ser conscientes de su carácter artificial, fueron muchos los casos de estudiantes de la universidad que deseaban conversar y contarle secretos al programa. Ya a fines del siglo pasado y comienzos del presente se destacó una cualidad de ciertos sitios web que más tarde se encontrarán presentes en la interacción con los chatbots de IA generativa, la sensación de anonimato. En este sentido, Turkle le presta especial atención al modo en que diferentes personas buscaban confesar secretos ante la audiencia de un sitio web que no las conocía.
+
+Por otro lado, las redes sociales, y la posibilidad de acceder a ellas desde cualquier lugar a través de dispositivos móviles, promueven conductas en las que los vínculos sociales se ven afectados. Fenómenos como consultar la disponibilidad de alguien por un sistema de mensajería instantánea en lugar de tocar su puerta, “pausar” conversaciones para revisar si hay novedades en el celular, recorrer una ciudad extranjera con un mapa interactivo como guía o incluso la concepción del denominado *multitasking* (la realización de distintas tareas al mismo tiempo) como una virtud son algunos de los cambios que la adopción de estas tecnologías produjeron en nuestras conductas. Según lo observado por la autora, la interacción cada vez más frecuente con estas tecnologías, que brindan ciertos beneficios como la sensación de compañía sin las demandas de los vínculos sociales reales, producen un empobrecimiento que, poco a poco, tiende a ser asumido como norma.
+
+En este trabajo se tensiona con la observación de la autora proponiendo que, lo que se presenta como empobrecimiento en las relaciones interpersonales, a la vez, podría funcionar como complemento ante una demanda insatisfecha de ayuda para lograr un bienestar psicológico o como un acercamiento hacia el contacto con profesionales de la salud mental dadas las condiciones adecuadas.
+
+Antes de adentrarnos en los abordajes acerca del uso de chatbots para fines vinculados con la salud mental, es pertinente definir algunos términos centrales en este estudio:
+
+Adoptamos la definición de ayuda psicológica como concepto que integra la idea de apoyo en temas tanto de salud mental como de bienestar psicológico. Entendemos por salud mental a un estado de bienestar mental que permite a las personas hacer frente a los momentos de estrés de la vida, desarrollar todas sus habilidades, aprender y trabajar adecuadamente e integrarse en su entorno [@oms2025]. El bienestar psicológico, por otro lado, es comprendido como la apreciación positiva de uno mismo, la capacidad para manejar de forma efectiva el medio y la propia vida, la alta calidad de los vínculos personales, la creencia de que la vida tiene propósito y significado, el sentimiento de que se va creciendo y desarrollándose a lo largo de la vida y el sentido de autodeterminación [@ryff_keyes1995]. Si bien cada definición tiene su precisión y diferencias, para el caso de este trabajo se van a utilizar de manera intercambiable.
+
+Por otro lado, recuperamos la definición de inteligencia artificial generativa (de aquí en adelante, IA generativa) como sistemas diseñados para crear textos, imágenes, videos o códigos de programación de manera automática a partir de una instrucción (*prompt*) brindada por un usuario [@cepe_fundar2025].
+
+Asimismo, tomamos la noción de modelos de lenguaje a gran escala (de aquí en adelante, LLM, por sus siglas en inglés, *Large Language Models*) entendiéndolos como sistemas específicos de inteligencia artificial especializados en la generación de texto y cuyo objetivo es la simulación de un diálogo con una persona humana [@rousmaniere2025].
+
+Por último, los chatbots son aplicaciones creadas para simular una conversación escrita. Si bien pueden desarrollarse chatbots sin IA, los más recientes y conocidos se basan en modelos de lenguaje de gran escala (ChatGPT, Gemini, Meta AI, Claude, Copilot, DeepSeek, entre otras). Si bien, en términos precisos, IA generativa, LLM y chatbots tienen significados distintos, para los fines expositivos de este trabajo se usan estos términos de manera indistinta.
+
+La mayor parte de los estudios centrados en el uso de IA generativa para cuestiones vinculadas con el bienestar psicológico se focalizaron en problemáticas como la efectividad de estas herramientas en el tratamiento de síntomas de salud mental, análisis de expertos, análisis cualitativos de testimonios y experiencias y, en línea con la propia investigación, la adopción de la IA por parte de la población en general. Con la intención de aportar al conocimiento de la problemática en nuestro país, para este trabajo se recuperaron aportes de investigaciones con diferentes enfoques. Con respecto a los estudios centrados en la opinión de expertos, se destaca el artículo de Kabrel y equipo [-@kabrel2025] en donde se propone que, si bien muchos trabajos se focalizan en la efectividad de estas herramientas como reemplazo a terapias y tratamientos de salud mental, si se observa el ciclo completo de interacción entre las personas y los sistemas de la salud, dichas herramientas podrían lograr mejores resultados por fuera de la terapia en sí misma, en los casos en los que hubiera una insuficiente disponibilidad de profesionales, a partir de, por ejemplo, la detección temprana de diagnósticos, la prevención, la atención entre sesiones y el post tratamiento. Al respecto, y en relación a las investigaciones que analizan testimonios de usuarios de estas herramientas, se destaca el artículo de Ajmani y equipo [-@ajmani2025]. A partir de entrevistas a personas que utilizaron la IA cuando experimentaron situaciones de crisis de salud mental y también a profesionales expertos, los autores señalan que, para quienes usaron estas herramientas como pacientes, las razones principales fueron: la falta de acceso a profesionales y el miedo a resultar una carga para otros. Desde la mirada de los expertos se registró que recurrir a conversaciones con herramientas IA ya es un comportamiento que indica apertura a recibir ayuda y, por tanto, una oportunidad, y que el contacto persona a persona es de suma importancia. Concluyen así que un buen camino para estas herramientas es preparar a las personas en crisis para el contacto con profesionales o relaciones que puedan proveer ayuda.
+
+A partir de una perspectiva más afín a la propia, se encuentran los estudios que abordan la adopción de la IA generativa por parte de la sociedad. Se destaca el trabajo de Rousmaniere y equipo [-@rousmaniere2025], el cual analiza los modos en que residentes estadounidenses con un diagnóstico de salud mental utilizan los LLM como recurso de apoyo para el bienestar psicológico y la salud mental (N = 499). Centrándose en las dimensiones de frecuencia de uso, motivaciones y efectividad percibida de la herramienta, se destacan entre sus ventajas principales la facilidad de acceso y la accesibilidad económica, considerando las barreras de los sistemas de salud actualmente, también sus posibilidades en la detección temprana y predicción de síntomas. En cuanto a los riesgos, mencionan los sesgos producidos por los datos de entrenamiento, las alucinaciones,[^2] la falta de comprensión real de las circunstancias de cada individuo y cultura, y que la efectividad depende en gran medida de la capacidad de las personas para formular sus necesidades por escrito. Por último, concluyen que estas herramientas podrían ayudar a atender las falencias de los sistemas de salud mental, siempre y cuando se establezca su efectividad clínica y la seguridad en su uso.
+
+Por otro lado, y a pesar del aporte que hace el trabajo a la caracterización del empleo de estas herramientas, el estudio de Rousmaniere y otros [-@rousmaniere2025] no analiza el uso en aquellas personas que podrían utilizarlas preventivamente y sin diagnóstico previo. Este aspecto es abordado en el trabajo de Ueda y equipo [-@ueda2026], en el que amplían el estudio a la población general de Estados Unidos, más allá de haber recibido o no un diagnóstico en salud mental. Su objetivo es entender cómo las personas están empezando a elegir herramientas de IA generativa para discutir y manejar preocupaciones de salud mental. A través de encuestas, encontraron que el 35,2% (N = 1805) reportaron usar herramientas de I.A generativa para apoyo en salud mental al menos una vez a la semana. Por otro lado, también descubren que la mayor parte de la muestra tiene preferencia por atender sus problemáticas de otras formas, como recurriendo a familia, amigos o a profesionales de la salud. Un aspecto destacable es que la recurrencia a este tipo de chatbots suele ser más probable entre aquellas personas con mayores síntomas de ansiedad y depresión.
+
+El trabajo de Díaz y Huguet [-@diaz_huguet2026], por su parte, realizado para la región de Cataluña en España, analiza el uso espontáneo que sus residentes hacen de la plataforma ChatGPT para cuestiones vinculadas con la salud mental. Realizaron encuestas en las cuales un 17,2% (N = 500) reportaron utilizar ChatGPT como recurso para el apoyo de su salud mental. Entre los motivos por los cuales la población tiende a recurrir a la IA, se destacan: la velocidad en la respuesta, la accesibilidad, disponibilidad y facilidad de uso. Al mismo tiempo, se señala la falta de confianza en las respuestas como una barrera a su adopción. Se destacó que la percepción de la efectividad de estas herramientas está dividida con 36% encontrando resultados positivos, 44,2% reportando resultados mixtos, negativos o nulos.
+
+En el plano local, se encuentra el informe producido en conjunto por las fundaciones CEPE y Fundar [-@cepe_fundar2025], en el cual se analizó para qué objetivos la población general del país está adoptando las herramientas IA generativa. A partir de una encuesta (N = 1589) la investigación señala una adopción temprana y desigual de estas herramientas en Argentina, registrando un 45,5% de personas adultas que la usan para diversos fines personales, alcanzando de este modo niveles similares al promedio global. Entre quienes usan la IA como herramienta, el 20,3% declaró haberla utilizado para fines que los autores denominan como “conversación libre o apoyo terapéutico” [@cepe_fundar2025, p. 13]. Por otro lado, los autores destacan que aún hay bajos niveles de capacitación para el uso de la IA a nivel individual y que, en su mayoría, quienes las usan suelen haber realizado un aprendizaje autodidacta y más bien superficial. Otro estudio realizado en el contexto local es el llevado a cabo por Etchevers y equipo [-@etchevers2025], en el marco del Observatorio de Psicología Social Aplicada de la Facultad de Psicología de la Universidad de Buenos Aires. En su último informe anual sobre salud mental, los autores incorporan el uso de redes sociales e IA entre las dimensiones que influyen en el estado emocional general de la población argentina. Según la investigación, el 58,9% de la población encuestada (N = 2213) hace uso de herramientas de IA. Por otro lado, y de un modo similar al estudio de Ueda y equipo [-@ueda2026], el trabajo indica que el 92,63% de las personas encuestadas preferirían hablar con un profesional humano antes que con una IA, y que el 7,37% que no preferiría a profesionales, experimenta mayores niveles de sufrimiento psicológico.
+
+Recuperando los aportes de las investigaciones mencionadas, el estudio que abordamos presenta el análisis sobre la adopción de chatbots para cuestiones vinculadas con la ayuda psicológica por parte de la población del Área Metropolitana de Buenos Aires en Argentina. Dada la veloz expansión que está teniendo el uso de la IA en la vida cotidiana [@cepe_fundar2025], consideramos necesario estudiar el fenómeno en profundidad, para, de esta forma, aportar a pensar estrategias realistas que puedan aprovechar las oportunidades de esta nueva tecnología y, al mismo tiempo, reducir sus potenciales riesgos.
+
+## Metodología
+
+En este estudio exploratorio de tipo transversal, los datos fueron recolectados de septiembre a noviembre de 2025. Se realizaron encuestas anónimas y autoadministradas, las cuales fueron difundidas a través de redes sociales y relaciones personales. Se empleó para la difusión la técnica de bola de nieve [@marradi_archenti_piovani2007], invitando a quienes contestaban la encuesta a compartirla con sus conocidos y grupos cercanos. Se estableció un muestreo no probabilístico con aproximación a la población por cuotas que contempló las variables: lugar de residencia, género asignado al nacer y edad según datos del Censo Nacional de Población, Hogares y Viviendas 2022 [@indec2022]. Al tratarse de una muestra no probabilística, sus hallazgos deben ser interpretados como una descripción de esta muestra y no un estimado zonal o nacional. Con respecto a las limitaciones del alcance de la propia muestra, es necesario señalar que el diseño muestral no aproxima representatividad poblacional para factores de clase social, nivel educacional ni diferencias culturales. Asimismo, se encuentra sobrerrepresentado el nivel educativo postuniversitario y subrepresentados los niveles primario y secundario.
+
+El cuestionario estuvo integrado por veinticinco preguntas e incluyó preguntas sociodemográficas (género asignado al nacer, edad, localidad de residencia, máximo nivel educativo alcanzado y clase social autopercibida), interrogantes asociados al uso de la IA (si se hace o no uso de algún tipo de chatbot y, en caso afirmativo, desde cuándo se lo hace y con qué frecuencia) y consultas acerca de los servicios de ayuda psicológica profesionales (si se hace o hizo en algún momento tratamiento terapéutico, en caso afirmativo qué tipo de tratamiento y cómo se lo valora en comparación con las respuestas de la IA). La mayoría de las preguntas fueron cerradas. No obstante, el cuestionario incluyó también algunas preguntas abiertas de tipo cualitativo, con la intención de conocer en mayor profundidad las percepciones subjetivas que las personas encuestadas tienen sobre la IA y su relación con los servicios de terapia profesional. El análisis de estas respuestas se basó en la identificación de temas recurrentes y la emergencia de conceptos considerados significativos [@glaser_strauss1999].
+
+Al cerrar la encuesta se obtuvieron las respuestas de 510 personas, de las cuales 93,1% viven en C.A.B.A. o Provincia de Buenos Aires y solo 6,9% en otros distritos del país. Con el fin de lograr una mejor aproximación, se decidió focalizar el estudio en los casos circunscriptos al Área Metropolitana de Buenos Aires y se descartaron los casos por fuera, quedando un total de 420 casos válidos para el análisis cuantitativo. La plataforma de recolección fue Google Forms y la de análisis fue SPSS.
+
+Hubo dos grupos demográficos que no fueron incluidos, los menores a 18 y los mayores de 65 años, debido a que no se alcanzaron los casos suficientes. Se incluyó la categoría hombres de 55 y 64 años aunque es la menos robusta en la aproximación, en donde 1 caso pesa 3,36 ponderados.
+
+En síntesis, de los 510 casos se descartaron todos los distritos menos PBA y CABA y los rangos etarios menor a 18 años y mayor a 65 años resultando en 421 casos, a eso se le aplicó una ponderación para aproximar la muestra a la población quedando 420 casos ponderados. De esta población, el 57,3% vive en C.A.B.A., mientras que el otro 42,7% vive en la Provincia de Buenos Aires. En cuanto a su máximo nivel educativo alcanzado, el 54,1% indicó tener nivel universitario completo y más, un 36,4% nivel universitario incompleto, un 8,9%, un 0,4% secundario incompleto y un 0,2% primario completo. En cuanto a su género, 51,78% se identifican como mujeres y 48,22% como varones.[^3]
+
+## Resultados
+
+A continuación se exponen los principales datos obtenidos a lo largo de esta investigación. Se presentan las características que tiene el uso de la IA generativa para fines de ayuda psicológica por parte de la población relevada, las motivaciones que estas personas encuentran para usarla y las solicitudes y consultas más frecuentes. Se analizan también, la valoración de los resultados del uso de estas herramientas, las percepciones sobre los servicios de ayuda psicológica profesionales y algunos de los riesgos que las personas encuestadas consideran que puede traer el uso de estas apps.
+
+### Uso de la I.A: como herramienta para la ayuda psicológica
+
+Más de una de cada cinco personas (22,6%) reportaron utilizar un chatbot para fines vinculados con la ayuda psicológica. Entre las consultas más comunes, se destacan la necesidad de comprender las causas de distintas situaciones emocionales o vinculares y el acompañamiento para encontrar formas claras y asertivas de expresarse. El chatbot más frecuentemente utilizado es el ChatGPT de la empresa OpenAI (90%), seguido, con mucha diferencia, por las apps Gemini (33%), de Google, y Meta AI (15%), de la empresa Meta.[^4] De los 95 casos que usan la IA con objetivos vinculados a la ayuda psicológica, se observa que, el uso disminuye a medida que la edad aumenta. En la franja comprendida entre los 18 y los 24 años, el 29,7% usan la IA con estos fines, mientras que en el segmento de usuarios de entre 55 y 64 años de edad el porcentaje equivalente se reduce al 9,4%.
+
+Tabla 1
+
+*Uso de Chatbots IA con fines de ayuda psicológica segmentado según la edad de quienes respondieron (N = 420)*
+
+| Edad | Sí | No |
+|---|---:|---:|
+| Entre 18 y 24 | 29,7% (21) | 70,3% (49) |
+| Entre 25 y 34 | 27,8% (29) | 72,2% (74) |
+| Entre 35 y 44 | 25,5% (26) | 74,5% (75) |
+| Entre 45 y 54 | 17,1% (14) | 82,9% (67) |
+| Entre 55 y 64 | 9,4% (6) | 90,6% (59) |
+| Total | 22,6% (95) | 77,4% (325) |
+
+*Fuente: elaboración propia a partir de encuestas realizadas por medio de Google Form. Los casos válidos totales son 420.*
+
+Se presenta como un fenómeno reciente con solo un 8,7% que lo utiliza hace más de un año y un 41,3% que lo utiliza hace menos de 3 meses. En cuanto a la frecuencia de uso, se observó que un 9,6% indicó usarlo más de una vez al día, un 6,5% entre una vez al día o varias veces por semana y un 83,8% menos de diez veces al mes.
+
+Entre las principales motivaciones para recurrir a un chatbot en lugar de a un servicio de ayuda psicológica profesional, las personas encuestadas destacan la inmediatez ante una situación de crisis (65,3%), la curiosidad (57,8%), la percepción de anonimato (18,5%) y el hecho de que sea más económico que recurrir a un profesional humano (16,6%).
+
+Tabla 2
+
+*Razones elegidas para utilizar chatbots IA con fines de ayuda psicológica (pregunta con múltiples respuestas)*
+
+| Razones para utilizar chatbots IA | Frecuencia de respuestas |
+|---|---:|
+| Inmediatez ante crisis | 35,8% (62) |
+| Curiosidad | 31,7% (55) |
+| Cuestiones de anonimato | 10,2% (18) |
+| Más económico que recurrir a un profesional | 9,1% (16) |
+| Más fácil que encontrar a un profesional | 6,1% (11) |
+| Otra | 5,3% (9) |
+| Prefiero una IA a una persona | 1,8% (3) |
+| Total | 100% (174) |
+
+*Fuente: elaboración propia a partir de encuestas realizadas por medio de Google Form.*
+
+Con respecto a la valoración de los resultados obtenidos en la interacción, la mayoría de las personas que utilizaron IA con objetivos de ayuda psicológica tienden a dar una valoración positiva (véase el gráfico 1). Ante la pregunta sobre la percepción de los resultados de la interacción, un 58,5% de las personas percibió un resultado satisfactorio (es decir, bueno o muy bueno), mientras que un 29,7% no destacó que fuera bueno o malo, y el 6,9% restante indicó no estar seguro o estar ambivalente sobre el resultado de la interacción. Apenas el 2,3% de las personas consultadas manifestaron haber obtenido resultados negativos (malos o muy malos) en su interacción con el chatbot.
+
+```{r graficos-likert-setup, echo=FALSE, message=FALSE, warning=FALSE}
+path <- "Gráficos likert - Resultados.xlsx"
+
+likert <- readxl::read_excel(path, sheet = "Resultados cols")
+
+revista_theme <- ggplot2::theme_minimal(base_family = "Fira Sans Condensed", base_size = 12) +
+  ggplot2::theme(
+    text = ggplot2::element_text(color = "#333333", size = 9),
+    plot.title = ggplot2::element_text(face = "bold", size = 10, hjust = 0.5, color = "#333333"),
+    axis.text = ggplot2::element_text(size = 10, color = "#333333"),
+    axis.title = ggplot2::element_blank(),
+    panel.grid.major.y = ggplot2::element_blank(),
+    panel.grid.minor = ggplot2::element_blank(),
+    panel.grid.major.x = ggplot2::element_line(color = "grey85"),
+    plot.caption = ggplot2::element_text(size = 8, hjust = 0.5, color = "#666666")
+  )
+
+revista_fill <- ggplot2::scale_fill_manual(values = "#9237E2")
+
+orden_resultados <- c(
+  "Muy bueno",
+  "Bueno",
+  "Regular",
+  "Malo",
+  "Muy malo",
+  "No estoy seguro/a o estoy ambivalente"
+)
+
+orden_comparacion <- c(
+  "Mucho mejor ayuda",
+  "Mejor ayuda",
+  "Son similares",
+  "Peor ayuda",
+  "Mucho peor ayuda",
+  "Otra / Inseguro / Ambivalente"
+)
+
+plot_likert <- function(data, pregunta, orden, titulo, n) {
+  data |>
+    dplyr::filter(Pregunta == pregunta) |>
+    dplyr::mutate(Categoría = factor(Categoría, levels = rev(orden))) |>
+    ggplot2::ggplot(ggplot2::aes(x = Categoría, y = Porcentaje, fill = "Respuestas")) +
+    ggplot2::geom_col(show.legend = FALSE) +
+    ggplot2::geom_text(
+      ggplot2::aes(label = paste0(format(round(Porcentaje, 1), decimal.mark = ","), "%")),
+      hjust = -0.2,
+      size = 3,
+      family = "Fira Sans Condensed",
+      color = "#333333"
+    ) +
+    ggplot2::coord_flip() +
+    ggplot2::scale_y_continuous(expand = ggplot2::expansion(mult = c(0, .12))) +
+    ggplot2::labs(title = titulo, caption = paste0("N = ", n)) +
+    revista_theme +
+    revista_fill
+}
+```
+
+```{r grafico-1-resultados-ia, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Gráfico 1: Percepción de resultados de la interacción con un chatbot IA para las cuestiones consultadas (N = 95)."}
+plot_likert(
+  likert,
+  "Resultados I.A.",
+  orden_resultados,
+  "Percepción de resultados de la interacción con un chatbot IA",
+  95
+)
+```
+
+Son muchas las problemáticas personales abordadas a partir del uso de la IA generativa. Con respecto a la necesidad de comprender distintas situaciones emocionales y vinculares, lo más común es que el usuario plantee una experiencia y solicite a la IA que brinde su punto de vista. A partir de la devolución, varias de las personas encuestadas afirmaron que pudieron conocer otra perspectiva, comprender mejor la situación vivenciada y reflexionar acerca del propio comportamiento.
+
+> “Suelo hablar cuando tengo discusiones con mi círculo de amigos o familiares, para que me de una opinión más neutral y me ayude a entender no solo mi punto de vista sino poder entender el otro lado.” (Ante la pregunta: ¿podrías describir en pocas palabras cómo es tu interacción habitual con el chatbot IA para ayuda psicológica? ¿Qué le solés preguntar o comentar?)
+
+En lo que refiere al acompañamiento para encontrar formas más claras y asertivas de expresarse, dichos pedidos abordan temas como la corrección de un mensaje escrito, la búsqueda de formas de responder y hacer pedidos con mayor seguridad ante situaciones concretas. Una persona encuestada, por ejemplo, comentó que había usado el chatbot para encontrar una manera “constructiva” de comunicarse con una amiga.
+
+> “Decirle constructivamente a una amiga que las cosas que me dice me hacen sentir mal.” (Ante la pregunta: si te resultó especialmente útil para tus fines de ayuda psicológica, ¿podrías compartir un ejemplo específico?)
+
+También es común que se le comparta a los chatbots IA el propio modo de sentir para que éstos ayuden a otorgar un orden a los propios sentimientos y pensamientos. En algunos casos, incluso se señaló que el solo hecho de poner en palabras la propia consulta (“externalizar el pensamiento” en términos de alguna de las respuestas) funcionaba como una forma de “desahogo” y esto ya transmitía una relativa tranquilidad.
+
+> “Poner en palabras sentimientos o ver las realidades desde otro punto de vista. A veces nosotros lo vemos pero no lo queremos ver y si somos sinceros nos responde de acuerdo a la información que damos. Por ahí no te sentís juzgado como puede pasar con una persona.” (Ante la pregunta: si te resultó especialmente útil para tus fines de ayuda psicológica, ¿podrías compartir un ejemplo específico?)
+
+En ciertos casos, el límite entre las problemáticas ligadas a la salud mental y aquellas consultas sobre cuestiones vinculadas a la salud en términos más amplios se vuelve difuso. Esto es lo que ocurrió, por ejemplo, con consultas ligadas a planes de alimentación, rutinas para la actividad física, síntomas típicos de un embarazo o las características de un trastorno de la conducta alimentaria. A su vez, las personas consultadas también incluyeron algunos usos que exceden en sentido estricto la esfera de la salud, como la solicitud de ayuda de orientación vocacional o apoyo en la carrera laboral. Esto incluye la solicitud de información sobre diversas carreras y la supervisión en el armado del propio currículum y de un perfil de LinkedIn. Se evidencia, de este modo, como los chatbots se integran de manera progresiva como una fuente o recurso de consulta para problemáticas de distintas esferas de la vida cotidiana de sus usuarios.
+
+### Chatbots de IA generativa y profesionales de la salud mental
+
+Un fenómeno que se buscó conocer desde el comienzo de esta investigación fue la relación entre los usos de la IA con fines de ayuda psicológica y los servicios profesionales ya establecidos. En cuanto a la posibilidad de sustitución de los profesionales de la salud por herramientas de IA generativa, las respuestas de las personas encuestadas que hicieron uso de la IA con fines vinculados con la salud mental mostraron una inclinación más a la complementariedad que a la sustitución. Ante la pregunta sobre si estarían dispuestas a usar dicha tecnología cómo única ayuda, el 76,5% de las personas encuestadas que hacen un uso de chatbots indican que de ninguna manera estarían dispuestas a usarlo como único servicio, el 16,8% no manifestó estar segura y solo un 6,7% respondió de forma afirmativa. Esto va en línea con lo observado por CEPE y Fundar [-@cepe_fundar2025] sobre la percepción de los trabajadores argentinos en relación al uso de herramientas de IA generativa, lo que ellos llaman en su trabajo una percepción de “mejora sin reemplazo de tareas”.
+
+Por otro lado, también se preguntó a estas mismas personas, si son o fueron usuarios de servicios psicológicos profesionales. Al respecto, se registró que el 89,7% de las personas que alguna vez recurrieron a la IA como herramienta para la ayuda psicológica también utiliza, o utilizó en alguna oportunidad, servicios psicológicos profesionales, mientras que un 10,2% nunca utilizó servicios profesionales de ayuda psicológica. Entre los servicios profesionales utilizados se destacan la psicoterapia (89,8%), los servicios de psiquiatría (36%) y el counseling (12,5%).
+
+Asimismo, con el fin de conocer la valoración de los servicios psicológicos profesionales, se solicitó a las 85 personas que utilizaron ambos servicios que calificaran los resultados obtenidos, para luego compararlos con aquellos obtenidos por el chatbot (véase el gráfico 2). En este sentido, se registró que un 79,9% de las personas indicaron resultados satisfactorios (buenos o muy buenos) en su uso de servicios profesionales, un 17,6% indicaron resultados regulares (ni buenos ni malos), y sólo un 2,4% indicaron resultados insatisfactorios (malos o muy malos). Se observa, de este modo, que el uso de chatbots como herramienta de ayuda psicológica no se asocia en la mayoría de los casos con una ponderación baja o negativa de la terapia tradicional.
+
+```{r grafico-2-servicios-profesionales, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Gráfico 2: Percepción de resultados de la interacción con servicios profesionales (N = 85)."}
+plot_likert(
+  likert,
+  "Resultados servicios profesionales",
+  orden_resultados,
+  "Percepción de resultados de la interacción con servicios profesionales",
+  85
+)
+```
+
+A su vez, se hizo una comparación sobre la percepción entre los resultados de los servicios profesionales y los resultados de los servicios provistos por chatbots. Al respecto, se observó que un 5,3% de las personas encontraron mejores resultados (mejor o mucha mejor ayuda) en los servicios provistos por chatbots, un 21,6% los encontró similares, un 40,5% encontró peores resultados (peor o mucha peor ayuda) en esta nueva tecnología. Además, se destaca que un 32,6% no eligió dar una respuesta en el marco de las categorías comparativas, siendo lo más frecuente el no estar dispuesto a compararlas (véase al respecto el Gráfico 3).
+
+```{r grafico-3-comparacion-ia-profesionales, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Gráfico 3: Comparación de percepción de resultados de la IA con servicios profesionales (N = 85)."}
+plot_likert(
+  likert,
+  "¿Cómo compararía?",
+  orden_comparacion,
+  "Comparación de resultados de la IA con servicios profesionales",
+  85
+)
+```
+
+De lo expuesto se desprende que la amplia mayoría de las personas consultadas en la muestra consideran que la ayuda psicológica de un profesional es más efectiva que formular preguntas a un chatbot. Sin embargo, también comprenden a la IA como una herramienta complementaria que, en varios casos, les permite resolver inquietudes que emergen entre las sesiones, así como también atender problemas considerados menores o “banales” y, de esta forma, “aprovechar” la terapia para las cuestiones que consideran más importantes.
+
+> “Le doy ejemplos de actitudes, comportamientos o acciones de otras personas que no entiendo (por ejemplo, ex amistades) y le pido que las analice. Me parecen temas muy banales para tratarlos en terapia, pero a la vez me importan y necesito abordarlos.” (Ante la pregunta: ¿podrías describir en pocas palabras cómo es tu interacción habitual con el chatbot IA para ayuda psicológica? ¿Qué le solés preguntar o comentar?)
+
+Por otro lado, también es común que pacientes “ensayen” el abordaje de un tema para luego poder exponerlo con mayor claridad en la sesión con profesionales de la ayuda psicológica.
+
+> “Le pregunté una sola vez por algo puntual que me generaba dudas y quería investigar antes de llevarlo a sesión con mi psicólogo.” (Ante la pregunta: ¿podrías describir en pocas palabras cómo es tu interacción habitual con el chatbot IA para ayuda psicológica? ¿Qué le solés preguntar o comentar?)
+
+> “Son temas que me avergüenza tratarlos en terapia, sumado a que está muy cara y prefiero usar el tiempo de la sesión para otros temas.” (Ante la pregunta: si te resultó especialmente útil para tus fines de ayuda psicológica, ¿podrías compartir un ejemplo específico?)
+
+Si se toman como referencia las respuestas a la pregunta sobre los resultados del tratamiento terapéutico profesional y el intercambio con la IA y los últimos testimonios citados, se puede interpretar que los servicios profesionales son bien ponderados por la mayoría de estos usuarios. Sin embargo, dicha ponderación no excluye, sino que se condice con el uso de chatbots con fines de ayuda psicológica. De este modo, los servicios profesionales son empleados para problemas considerados de mayor urgencia o gravedad mientras que el uso de la IA se concentra en problemáticas consideradas menores pero no por ello menos presentes.
+
+### Riesgos del uso de la IA para objetivos vinculados con la ayuda psicológica
+
+Si bien la amplia mayoría de las personas que utilizaron la IA para atender problemas vinculados con la ayuda psicológica mostraron una valoración favorable de esta herramienta, no todas las devoluciones brindadas por chatbots fueron consideradas positivas. De las 95 personas que conforman este segmento, un 15,6% expresó haber recibido información falsa o incorrecta, un 7% mencionó haber obtenido respuestas potencialmente perjudiciales y un 1%, respuestas ofensivas.
+
+Por otro lado, entre quienes afirmaron nunca haber utilizado un chatbot como herramienta de ayuda psicológica, el 34,6% expresó tener dudas sobre su efectividad, el 18,7% manifestó no haber contemplado nunca esa idea, el 12,2% mostró preocupación por la privacidad de los datos.
+
+Asimismo, el nivel de indulgencia, o incluso adulación (la denominada sicofancia), que pueden llegar a transmitir algunas respuestas brindadas por la IA resulta potencialmente delicado, en particular en lo que respecta al abordaje de problemas que requieren la especial atención de profesionales del campo [@openai2025; @sharma2023].[^5]
+
+> “Le conté de una situación en la que me sentí desestimada por mí familia y afirmó que era así, se puso muy lastimoso, creo que un profesional en general no va a afirmar si un tercero dijo o intento algo, era angustia de mí cabeza pero en vez de mantenerse al margen reafirmo algo como ‘evidentemente es muy duro porque realmente en tu familia no te aprecian…’ O algo así, a lo que voy es que no me hizo sentir bien y además sentí que estaba conversando con algo peligroso porque si fuera más sensible podría haberme hecho mucho peor.” (Ante la pregunta, ¿en algún momento recibiste una respuesta perjudicial o inapropiada por parte del chatbot IA?)
+
+En este sentido, un 7,5% de las personas que utilizan chatbots como herramienta para la ayuda psicológica expresaron haberla usado porque padecían pensamientos de autoagresión. En los casos relevados, se hizo mención de riesgos o perjuicios de corto plazo o susceptibles de ser reconocidos de forma más o menos inmediata por las personas consultadas. Quedan fuera del abordaje (por lo menos en la presente instancia de la investigación), perjuicios que el uso de estas herramientas pudiera producir a lo largo de períodos más extendidos y sin un registro tan evidente por parte del usuario o de la usuaria.
+
+## Discusión
+
+En el presente apartado se contrastan los resultados obtenidos con aportes de otros estudios que abordaron la adopción de la IA para fines de ayuda psicológica, contextualizando, de este modo, los propios resultados en un marco más amplio. Entre los principales resultados contrastados, se destacan el nivel de extensión del uso de chatbots para fines de ayuda psicológica, los modos en que el empleo de estas herramientas convive con los servicios profesionales y algunas de las potencialidades que podría tener la articulación entre ambos.
+
+### Uso de la I.A: del contexto local al contexto global
+
+En el contexto de la Ciudad de Buenos Aires y de la Provincia de Buenos Aires, y si bien la propia muestra no es probabilística, los datos observados nos sugieren que la proporción de la población que recurre a la IA con fines vinculados con la salud mental es un poco mayor a una quinta parte de la población (22,6%). En términos generales, este porcentaje se asemeja a los indicados en otros países como Estados Unidos (35,2%) o regiones como Cataluña, España (17,2%) [@diaz_huguet2026; @ueda2026]. Si se considera un rango de usos más amplio que incluye objetivos de ayuda psicológica y otros usos personales, en el estudio de las fundaciones CEPE y Fundar [-@cepe_fundar2025] señala que la proporción de la población local que utiliza la IA para distintos fines personales es muy similar al promedio global. Si bien los números son relativamente similares para poblaciones generales, poblaciones con diagnósticos de salud mental en Estados Unidos mostraron una proporción de uso sustancialmente mayor (48,7%) [@rousmaniere2025]. Un hallazgo en la misma línea encuentran Etchevers y equipo [-@etchevers2025] en la población argentina donde se encontró que la población que elige hablar con una IA presenta mayores niveles de sufrimiento psicológico.
+
+Algunas de las principales razones para usar esta tecnología fueron la inmediatez ante crisis y la percepción de anonimato. Ambas razones sugieren potencialidades de estas herramientas, sobre todo en casos donde los servicios profesionales no llegan por distintos motivos como las restricciones de los horarios de atención, el acceso impedido (por lejanía, falta de movilidad o escasez de recursos) o el temor a sentirse juzgado. Este dato va en línea con lo que proponen Ajmani y equipo [-@ajmani2025] sobre respuestas ante crisis y los beneficios reportados por Rousmaniere y otros [-@rousmaniere2025]. La respuesta menos frecuente fue la preferencia de una IA por sobre una persona con un 1,7%, lo que coincide con los hallazgos en ambos trabajos donde la preferencia de amigos, familia y servicios profesionales fue ampliamente mayor a la preferencia por herramientas IA [@ueda2026; @diaz_huguet2026]. De hecho, la preferencia por la ayuda humana fue uno de los principales motivos esgrimidos por las personas consultadas en el propio estudio para no usar chatbots con estos fines.
+
+### Chatbots de IA generativa y profesionales de la ayuda psicológica, ¿un vínculo de complementariedad?
+
+La amplia mayoría (por lo menos tres de cada cuatro) de las personas encuestadas que utilizan el chatbot como una herramienta de apoyo psicológico tienen una valoración positiva de los servicios profesionales que atienden cuestiones vinculadas a la salud mental. En este sentido, se puede pensar que el uso de chatbots con fines de acompañamiento psicológico no siempre implica una disminución en la demanda de servicios terapéuticos profesionales. Sin embargo, y a partir de los mismos datos, también se podría argumentar lo inverso, es decir, la extensión de servicios de la ayuda psicológica profesional no implica necesariamente que las herramientas IA dejen de usarse. De hecho, estudios como los de Ueda y equipo [-@ueda2026] señalan que un 28,4% de las personas que encuestaron reportó recurrir a los servicios profesionales con menor frecuencia luego de haber empezado a usar herramientas con base en IA. Si bien en el trabajo realizado se puede observar que la ayuda profesional es percibida como valiosa y positiva, esto no significa que las personas descarten el uso de chatbots como formas que complementan, extienden o incluso, en ciertas situaciones, sustituyen el apoyo en temas de salud mental. Las propias observaciones muestran que existe un uso como complemento (por ejemplo, en la redacción de pensamientos y emociones, el ensayo previo al encuentro con un profesional o el abordaje de temas percibidos como menos importantes) a la par de la consulta con profesionales humanos.
+
+Las potencialidades como uso complementario por sus características son algo mencionado de distintas maneras en los antecedentes [@rousmaniere2025; @diaz_huguet2026]. Yendo un poco más allá de destacar las características, Kabrel y equipo [-@kabrel2025] hacen un análisis para pensar más ampliamente la interacción entre estas herramientas, los sistemas y los profesionales de la salud mental, considerando distintas etapas en el camino a obtener ayuda psicológica (prevención, tratamiento y post tratamiento) y los distintos roles que estas herramientas podrían ocupar para robustecer las capacidad humanas y llenar los faltantes que la evidencia de uso podría estar indicando en los sistemas de salud [@rousmaniere2025] tales como la falta de acceso a los profesionales o el miedo a sobrecargar a otros [@ajmani2025].
+
+Uno de los usos complementarios que se observan en la evidencia cualitativa sobre las interacciones con chatbots en este trabajo es la potencialidad que traen el anonimato y la percepción de estar libres de juicio. Esta tendencia a percibir las herramientas IA como menos críticas que las personas ya fue observada en el trabajo de Ajmani y equipo [-@ajmani2025], donde aparece como el segundo factor más importante después de la alta accesibilidad y antes del miedo a sobrecargar a otros. Esto sugiere una potencialidad de estas herramientas para aquellas personas que, por alguna razón, no estén preparadas o dispuestas a hablar con un profesional todavía, funcionando como puente y preparación para una conversación con un profesional tal como sugieren en su trabajo Ajmani y equipo [-@ajmani2025].
+
+En resumen, cuestiones como la complementariedad, la inmediatez, el acceso durante momentos de crisis, la atención permanente, el anonimato para hacer consultas sin sentirse juzgado, la percepción positiva y la curiosidad como indicio de apertura a un primer paso en la conversación sobre dificultades en la salud mental, pueden ser interpretadas como potencialidades notables. Por otro lado, el equipo de Rousmaniere [-@rousmaniere2025] señala que la herramienta es particularmente deficiente para reconocer indicios con el cuidado que amerita. Cuestiones como la adulación [@openai2025; @sharma2023] y otras respuestas potencialmente perjudiciales (alucinaciones, información falsa, etc.), la incertidumbre acerca del destino y la privacidad de los datos personales, la ausencia de responsabilidad ante perjuicios a los usuarios, la escasa transparencia en el funcionamiento de estos sistemas, la falta de claridad en los objetivos perseguidos por las empresas a cargo de estas plataformas y la falta de criterio profesional podrían ser graves factores de riesgo que necesitan ser atendidos.
+
+## Conclusiones
+
+A lo largo de este trabajo se abordaron los usos que hace una parte de la población argentina de los chatbots IA para afrontar dificultades personales vinculadas con la salud mental y el bienestar psicológico. Si bien los chatbots de IA generativa, y en particular los de uso amplio y acceso general (como, por ejemplo, ChatGPT, DeepSeek, Gemini, entre otros) no fueron pensados para estos fines, las personas ya los están empezando a usar. El carácter exploratorio de este estudio no permite extrapolar los resultados obtenidos a la población del AMBA o de la Argentina en general. No obstante, algunos datos coinciden, a grandes rasgos, con los aportes de estudios realizados tanto en el plano local como internacional. Además de profundizar el abordaje para lograr una mejor aproximación al uso de la IA de la población local, otros interrogantes ameritan ser abordados en futuros trabajos. Entre ellos, el modo en que la frecuencia, la magnitud y las características que asume el uso (y en particular las consultas realizadas o la formulación de los llamados *prompt*) varían de acuerdo con factores como el género, la edad, el nivel educativo o la clase social. Una de las tareas pendientes más inmediatas es el abordaje del uso de chatbots por parte de adolescentes, en particular varones. La dificultad para acceder a esta población es de por sí un dato, más si se considera que se trata de una generación que creció y crece con un mayor acceso a estas tecnologías.
+
+La relativa novedad del fenómeno dificulta en la actualidad el abordaje de sus efectos durante períodos más prolongados. Sin embargo, resulta pertinente considerar los potenciales beneficios de una articulación de estas herramientas con profesionales y sistemas de salud. Otro interrogante abierto son los efectos que el anonimato y la ausencia de una mirada crítica pueden producir en quienes, por distintas razones, no están preparados para buscar ayuda.
+
+Autoras como Turkle [-@turkle2011] señalan que un desahogo que no demanda las consecuente acciones (como lo serían, por ejemplo, un pedido de disculpas o la reparaciones de un daño, en caso de haberlo causado) perjudica el desarrollo de habilidades sociales, la empatía y la superación de traumas, motivo por el cual, insiste en el argumento de que un uso abusivo de estas herramientas tiende a provocar un empobrecimiento de relaciones sociales que, de manera paulatina, será asumido como norma. Sin embargo, estudios como los de Ajmani y equipo [-@ajmani2025] destacan este aspecto como una posibilidad de acercamiento virtuoso entre estas herramientas y los sistemas de salud.
+
+En el marco de la propia investigación se conocieron las percepciones que los usuarios tienen sobre los resultados del uso de la IA, sin embargo, es necesario abordar sus efectos también desde otras perspectivas. Por ejemplo, desde la mirada de profesionales de la salud o de estudios sobre la efectividad del uso que excedan la percepción subjetiva de quienes los utilizan.
+
+En este artículo se buscó pensar más allá del entusiasmo puro o del pensamiento catastrófico, intentando proponer un espacio donde se pueda concebir una articulación entre los servicios tradicionales, los sistemas de salud y las herramientas basadas en IA generativa que beneficie tanto a quienes usan la ayuda psicológica como también a quienes la ofrecen. Algunas ideas básicas surgen de este trabajo y refuerzan ideas que ya se están pensando en el campo de investigación. Dada la situación actual del fenómeno, consideramos que la prohibición ya no representa un camino viable, aunque algunas regulaciones como, por ejemplo, la protección de los datos personales y la advertencia a usuarios sobre su uso por parte de las organizaciones pueden reducir tanto riesgos como potenciales daños. Por otro lado, la producción de información pública de calidad sobre estas herramientas y otros recursos de ayuda podrían beneficiar a todos los actores del sistema de salud [@cepe_fundar2025]. Asimismo, y con respecto a la comunidad académica, resultaría importante continuar, profundizar y difundir la investigación sobre herramientas de IA generativa para fines de salud mental y bienestar psicológico, así como también sobre su eficacia, ética, privacidad, preferencia y complementariedad con los servicios profesionales de salud ya establecidos, además de trabajar lo más posible con quienes crean estas plataformas para entrenar los modelos en técnicas y prácticas basadas en evidencia y con salvaguardas que eviten los riesgos potenciales.
+
+## Agradecimientos
+
+Agradecemos a Gastón Becerra por la invitación a participar en este número y por sus comentarios y sugerencias, a Franco Sasso Videla por su ayuda y asesoramiento en cuestiones de estadísticas e investigación cuantitativa y a todas las personas que nos apoyaron con la difusión de la encuesta.
+
+[^1]: Un exponente público de este fenómeno fue el testimonio del youtuber argentino Tomás Mazza, quien expresó utilizar ChatGPT como “una herramienta introspectiva accesible, capaz de brindar contención y escucha y análisis”. Véase Castro [-@castro2025].
+
+[^2]: Se denomina alucinaciones a las respuestas generadas por los modelos de lenguaje que, por su formulación, se presentan de manera convincente, pero cuyo contenido es falso [@rousmaniere2025].
+
+[^3]: En lo que respecta a diversidad, para poder comparar representatividad se decidió trabajar con aquellos géneros que coinciden con los relevados en el Censo 2022 en la variable “sexo al nacer” que contiene solo dos categorías: “mujer” y “hombre”. Se decidió entonces tomar esas categorías y dejar fuera del análisis, en la presente instancia, las categorías (“no binario”, “otro” y “no quiero especificar”).
+
+[^4]: La pregunta referente a la aplicación más utilizada admitió respuestas múltiples, por lo que la suma de porcentajes de las opciones dio un resultado superior a 100%.
+
+[^5]: Un caso lamentable al respecto fue el fallecimiento del joven estadounidense Adam Raine, de 16 años, quien habría causado su muerte luego de que un chatbot alentase esa decisión. Véase Grados Córdova [-@gradoscordova2025].
+
+## Referencias
+
+<div id="refs"></div>
+

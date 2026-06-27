@@ -1,0 +1,44 @@
+{
+  "title_sp": "Humanities and Social Sciences Commons. Herramienta para la colaboración y difusión de resultados de investigación",
+  "abstract_sp": "El Humanities and Social Sciences (HSS) Commons es una herramienta multilingüe para difundir resultados de investigación como bases de datos, reportes, entradas de blog y presentaciones. Al difundirlos en el sitio, se les asigna un identificador permanente para poder ser citados y reconocidos. Además, el HSS Commons permite establecer fácilmente una presencia digital a investigadores, grupos de investigación, revistas científicas y congresos gracias a las funcionalidades de grupos y proyectos colaborativos.",
+  "keywords_sp": ["infraestructura digital", "bienes comunes del conocimiento", "comunicación de la ciencia"],
+
+  "title_en": "Humanities and Social Sciences Commons. A Tool for Collaboration and Dissemination of Research Outputs",
+  "abstract_en": "The Humanities and Social Sciences (HSS) Commons is a multilingual tool for sharing research outputs, such as presentation slides, data, reports, and blog posts. By sharing them in the site, they are assigned a permanent identifier so they can be cited and recognized. In addition, the HSS Commons allows scholars, research groups, journals, and conferences to easily establish an online presence thanks to the collaborative groups and projects features.",
+  "keywords_en": ["digital infrastructure", "knowledge commons", "scholarly communication"],
+
+  "authors_name": "Alan Colin-Arce",
+  "authors_affiliation": "University of Victoria, Electronic Textual Cultures Lab, Canadá",
+  "authors_orcid": "https://orcid.org/0000-0002-0437-7193",
+  "authors_email": "alan4rce@gmail.com",
+
+  "language": "es",
+  "type": "Text.Serial.Journal",
+  "format": ["application/pdf", "text/html"],
+
+  "repository_url": "https://github.com/etcluvic/hsscommons",
+  "readme_url": "",
+  "archive_url": "",
+  "documentation_url": "",
+  "vignette_url": "",
+  "demo_url": "",
+  "website_url": "https://hsscommons.ca/es/",
+  "licence_url": "https://github.com/etcluvic/hsscommons?tab=readme-ov-file#licence",
+
+  "techonologies": ["PHP", "JavaScript", "CSS", "HTML"],
+
+  "source": "Desarrollos en ciencias sociales computacionales",
+  "publisher": "Universidad de Flores, Argentina",
+  "section": "Desarrollos",
+  "source_volume": "1",
+  "source_issue": "1",
+  "source_issn": "en trámite",
+  "identifier": "",
+  "identifier_uri": "",
+  "pages": "e2",
+
+  "date_created": "2025-03-23",
+  "date_issued": "2025-03-25",
+  "date_modified": "0000-00-00"
+
+}

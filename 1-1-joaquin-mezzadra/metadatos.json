@@ -1,0 +1,50 @@
+{
+  "title_sp": "Adaptación y validación de la AI Attitude Scale (AIAS-4) en el contexto argentino",
+  "title_en": "Adaptation and Validation of the AI Attitude Scale (AIAS-4) in the Argentine Context",
+  "abstract_sp": "Este artículo presenta la adaptación y validación de la AI Attitude Scale (AIAS-4) de Grassini (2023) en el contexto argentino. La escala evalúa la actitud general hacia la inteligencia artificial (IA) como un constructo unidimensional, abarcando la percepción de utilidad personal, el impacto en la vida y el trabajo, las intenciones futuras de uso y la valoración de su efecto global en la humanidad. El estudio se realizó sobre una submuestra de 426 adultos argentinos usuarios de IA, extraída de un total de 525 participantes. La escala adaptada mostró una adecuada consistencia interna: α de Cronbach = .784 y ω de McDonald = .787. Mediante análisis factorial confirmatorio, se confirmó la estructura unidimensional de la escala, con excelentes índices de ajuste: CFI escalado = .983, TLI escalado = .949, SRMR robusto = .027. Las cargas factoriales estandarizadas fueron todas significativas (p < .001) y oscilaron entre .683 y .790. El análisis de invarianza de medida por género indicó que la escala es invariante a nivel escalar (ΔCFI ≤ .010), permitiendo comparaciones válidas de medias entre varones y mujeres. Se discuten las implicancias de contar con este instrumento adaptado al contexto local para investigar las actitudes hacia la IA en Argentina, así como las limitaciones, derivadas del muestreo no probabilístico y el alto nivel educativo de la muestra. La escala resulta apropiada para su uso en investigación sobre aceptación y actitudes hacia la IA en población argentina.",
+  "abstract_en": "This article presents the adaptation and validation process of the AI Attitude Scale (AIAS-4) by Grassini (2023) in the Argentine context. The scale assesses general attitude toward artificial intelligence (AI) as a unidimensional construct, encompassing perception of personal utility, impact on life and work, future use intentions, and assessment of its global effect on humanity. The study was conducted on a subsample of 426 Argentine AI users, drawn from a total of 525 participants. The adapted scale showed adequate internal consistency: Cronbach's α = .784 and McDonald's ω = .787. Using confirmatory factor analysis, the unidimensional structure of the scale was confirmed, with excellent fit indices: scaled CFI = .983, scaled TLI = .949, robust SRMR = .027. All standardized factor loadings were significant (p < .001) and ranged from .683 to .790. Measurement invariance analysis by gender indicated that the scale is invariant at the scalar level (ΔCFI ≤ .010), allowing valid mean comparisons between men and women. We discuss the implications of having this instrument adapted to the local context for investigating attitudes toward AI in Argentina, as well as the limitations derived from non-probabilistic sampling and the high educational level of the sample. The scale is suitable for use in research on acceptance and attitudes toward AI in the Argentine population.",
+  "keywords_sp": ["actitudes", "inteligencia artificial", "adaptación", "evaluación"],
+  "keywords_en": ["attitudes", "artificial intelligence", "adaptation", "measurement"],
+
+  "authors_name": [
+    "Joaquín Ignacio Mezzadra",
+    "Bruno Gambino",
+    "Verónica Bustamante-Serón",
+    "Ismael Ruiz Ortiz"
+  ],
+  "authors_affiliation": [
+    "Universidad de Flores, Argentina",
+    "Universidad de Buenos Aires, Argentina",
+    "Universidad de Valencia, España",
+    "Universidad de Valencia, España"
+  ],
+  "authors_orcid": [
+    "https://orcid.org/0009-0000-7962-4307",
+    "https://orcid.org/0009-0004-6754-1925",
+    "https://orcid.org/0009-0009-7163-7731",
+    "https://orcid.org/0000-0003-2350-5637"
+  ],
+  "authors_email": [
+    "joaquin.mezzadra@uflouniversidad.edu.ar",
+    "bgambino@sociales.uba.ar",
+    "bustamante.vero@gmail.com",
+    "ismael.p310@gmail.com"
+  ],
+
+  "language": ["es", "en"],
+  "type": "Text.Serial.Journal",
+  "format": ["application/pdf", "text/html"],
+
+  "source": "Desarrollos en Ciencias Sociales Computacionales",
+  "publisher": "Univesidad de Flores",
+  "source_volume": "1",
+  "source_issue": "1",
+  "source_issn": "En trámite",
+  "pages": "e7",
+  "identifier": "MISSING",
+  "identifier_uri": "MISSING",
+
+  "date_created": "2026-03-01",
+  "date_issued": "2026-06-16",
+  "date_modified": "2026-06-16"
+}

@@ -1,0 +1,59 @@
+{
+  "title_sp": "Percepción Docente sobre ChatGPT en la Educación Universitaria: Explorando la I.A. en la Universidad de Flores",
+  "abstract_sp": "El objetivo es describir las opiniones de los docentes de la Universidad de Flores respecto al uso emergente de ChatGPT en la educación universitaria, a la luz de los desafíos éticos y epistemológicos que plantea esta tecnología. La metodología es cuantitativa, descriptiva, mediante encuesta online a 151 docentes realizada entre abril y junio de 2023. Los hallazgos sugieren una etapa temprana de integración de ChatGPT, con brecha de alfabetización digital y necesidad de formación docente para mitigar riesgos éticos y epistemológicos.",
+  "keywords_sp": ["ChatGPT", "educación universitaria", "inteligencia artificial", "innovación educativa", "Universidad de Flores"],
+
+  "title_en": "University Teachers’ Perceptions of ChatGPT in Higher Education: Exploring AI at Universidad de Flores",
+  "abstract_en": "The objective is to describe the opinions of the Universidad de Flores faculty members regarding the emerging use of ChatGPT in university education, in light of the ethical and epistemological challenges posed by this technology. The methodology is quantitative, descriptive, using an online survey with 151 faculty members conducted between April and June 2023. The findings suggest an early stage of ChatGPT integration, with a digital literacy gap and the need for teacher training to mitigate ethical and epistemological risks.",
+  "keywords_en": ["ChatGPT", "university education", "artificial intelligence", "educational innovation"],
+
+
+  "authors_name": [
+    "Selediana de Souza Godinho",
+    "Viviana Edith Scabone",
+    "Sergio Yepez"
+  ],
+  "authors_affiliation": [
+    "Universidad de Flores, Argentina",
+    "Universidad de Flores, Argentina",
+    "Universidad de Flores, Argentina"
+  ],
+  "authors_orcid": [
+    "https://orcid.org/0000-0003-0686-4654",
+    "https://orcid.org/0000-0003-4808-1332",
+    "https://orcid.org/0000-0002-5832-5188"
+  ],
+  "authors_email": [
+    "selediana.godinho@uflouniversidad.edu.ar",
+    "viviana.scabone@uflouniversidad.edu.ar",
+    "sergio.yepezsantiago@uflouniversidad.edu.ar"
+  ],
+
+  "language": ["es", "en"],
+  "type": "Text.Serial.Journal",
+  "format": ["application/pdf", "text/html"],
+
+  "repository_url": "",
+  "readme_url": "",
+  "archive_url": "",
+  "documentation_url": "",
+  "vignette_url": "",
+  "demo_url": "",
+  "licence_url": "",
+
+  "technologies": [],
+
+  "source": "Desarrollos en ciencias sociales computacionales",
+  "publisher": "Universidad de Flores, Argentina",
+  "section": "Artículos de investigación",
+  "source_volume": "1",
+  "source_issue": "1",
+  "source_issn": "",
+  "identifier": "",
+  "identifier_uri": "",
+  "pages": "e3",
+
+  "date_created": "2025-06-13",
+  "date_issued": "2025-07-20",
+  "date_modified": "2025-07-15"
+}

@@ -1,0 +1,59 @@
+---
+title: "Revista Desarrollos en Ciencias Sociales Computacionales"\r\nknit: (function(inputFile, ...) {
+  rmarkdown::render(inputFile, output_dir = "outputs", ...)
+})
+output:
+  html_document:
+    self_contained: true
+    theme: null
+    mathjax: null
+    highlight: tango
+    includes:
+      in_header: "custom-head.html"
+  word_document: default
+  pdf_document: 
+    latex_engine: xelatex
+    keep_tex: true
+    highlight: tango
+bibliography: referencias.bib
+csl: ../template/apa.csl
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{Fira Sans Condensed}
+---
+
+
+```{r header, echo=FALSE, results='asis'}
+source("../template/header.R")
+```
+
+## Justificación
+
+El Humanities and Social Sciences (HSS) Commons es un espacio en línea abierto donde los investigadores pueden compartir información y recursos, hacer conexiones y formar comunidades [@winter2020]. Al crear una cuenta o iniciar sesión con ORCID, se forma un perfil personal donde se pueden crear y difundir entradas de blog, así como un espacio para compartir la información profesional y el currículum del usuario. Para conectar con otros usuarios, se pueden crear grupos de colaboración para compartir archivos e información y también hay una función de proyectos compartidos para gestionar datos de investigación y listas de tareas. El HSS Commons es una iniciativa de la Asociación para la Implementación de Nuevos Entornos de Conocimiento (INKE, por sus siglas en inglés), en asociación con el Canadian Social Knowledge Institute, CANAIRE, Compute Canada, el Electronic Textual Culture Lab, Federation for the Humanities and Social Sciences, y la Modern Language Association.
+
+
+Esta herramienta proporciona un espacio en acceso abierto para fomentar la colaboración entre investigadores y compartir distintos tipos de resultados de investigación, como bases de datos, visualizaciones, código, presentaciones, reportes y recursos educativos. Muchos de estos resultados forman una parte importante del proceso de investigación, especialmente en las ciencias sociales computacionales y las humanidades digitales, pero este trabajo no siempre es difundido y reconocido [@alperin2022; @waters2023]. El HSS Commons permite difundir todos estos recursos y les asigna un identificador de objeto digital (DOI por sus siglas en inglés), un enlace permanente para recursos digitales, lo que permite preservarlos y citarlos de una manera sencilla.
+
+El desarrollo y la gestión de la herramienta es realizado sin fines de lucro por miembros de la comunidad académica y se priorizan las necesidades de los investigadores. Por lo tanto, se respeta la privacidad de los usuarios, se recolecta sólo la información necesaria para mantener el sitio y se cuenta con mecanismos para reportar contenido inapropiado [@jensen2022]. Además, a diferencia de otras herramientas de comunicación académica, la interfaz está disponible en cuatro idiomas (español, inglés, francés y bengalí) para que sea accesible para una mayor cantidad de personas. Una traducción al portugués del sitio también está en desarrollo.
+
+## Estructura del sitio
+
+El sitio tiene múltiples funcionalidades para compartir recursos académicos y colaborar. Entre ellas destacan las siguientes.
+
+- *Repositorio*: el repositorio es un espacio de acceso abierto donde se pueden compartir y consultar libremente publicaciones, recursos educativos, datos y otros materiales académicos.
+-	*Grupos*: los grupos son un espacio para compartir archivos y discusiones de forma pública o privada. También permiten crear una presencia digital a grupos de investigación, revistas académicas, congresos, sociedades académicas, etc. Un ejemplo es el grupo del congreso [Forward Linking](https://hsscommons.ca/en/groups/forward_linking/overview).
+-	*Proyectos*: los proyectos son una forma de gestionar datos, flujos de trabajo y comunicación. Asimismo, permiten publicar entradas de blog y administrar publicaciones. 
+-	*Colecciones*: las colecciones son una forma de guardar y organizar recursos de Internet y compartirlos con el resto de usuarios del HSS Commons. Un ejemplo es la colección de [Archivos web en español](https://hsscommons.ca/es/members/1417/collections/web-archives-in-spanish).
+
+## Otras herramientas
+
+Existen otras herramientas que sirven para conectar a investigadores y compartir distintos resultados de investigación. [Knowledge Commons](https://hcommons.org/) es una herramienta similar que permite crear grupos colaborativos y compartir distintos tipos de publicaciones en su repositorio. Sin embargo, su interfaz solamente está disponible en inglés, lo que puede excluir a personas hispanohablantes que no dominan este idioma o que prefieran usar una herramienta en español.
+
+Bases de datos latinoamericanas como [Redalyc](https://www.redalyc.org/) y [Scielo](https://scielo.org/) permiten compartir artículos revisados por pares, pero están orientados a revistas académicas, no a investigadores, entonces no tienen funcionalidades para crear grupos o proyectos colaborativos. Scielo permite publicar prepublicaciones y bases de datos (además de artículos académicos), pero no publicaciones más informales como entradas de blog, reportes o presentaciones, mientras que Redalyc tiene un enfoque aún más limitado a revistas latinoamericanas en acceso abierto.
+
+[ResearchGate](https://www.researchgate.net/) y [Academia.edu](http://academia.edu/) ofrecen la flexibilidad para compartir distintos tipos de publicaciones y también conectan a millones de usuarios. Sin embargo, ambas iniciativas tienen fines de lucro y han sido criticadas por extraer y comercializar con los datos e información personal de los académicos [@adema2015]. Además, sus interfaces solo están disponibles en inglés y la comunidad académica no tiene control de cómo se manejan los sitios.
+
+## Referencias
+
+<div id="refs"></div>
+
