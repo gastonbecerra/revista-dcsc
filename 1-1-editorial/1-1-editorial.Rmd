@@ -13,14 +13,14 @@ output:
     latex_engine: xelatex
     keep_tex: true
 bibliography: referencias.bib
-csl: ../../template/apa.csl
+csl: ../template/apa.csl
 header-includes:
   - \usepackage{fontspec}
   - \setmainfont{Fira Sans Condensed}
 ---
 
 ```{r header, echo=FALSE, results='asis'}
-source("../../template/header.R")
+source("../template/header.R")
 ```
 
 ## Editorial
@@ -32,5 +32,5 @@ Escribe aquí el editorial del volumen.
 <div id="refs"></div>
 
 ```{r footer, echo=FALSE, results="asis"}
-source("../../template/footer.R")
+source("../template/footer.R")
 ```
