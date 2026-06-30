@@ -14,7 +14,7 @@ estilos <- "
 <style>
 @page {
   size: A4;
-  margin: 1.5cm;
+  margin: 0.75cm;
 }
 body {
   font-family: 'Fira Sans Condensed', sans-serif;
