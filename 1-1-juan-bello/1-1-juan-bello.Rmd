@@ -174,7 +174,7 @@ plot_likert <- function(data, pregunta, orden, titulo, n) {
 }
 ```
 
-```{r grafico-1-resultados-ia, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Gráfico 1: Percepción de resultados de la interacción con un chatbot IA para las cuestiones consultadas (N = 95)."}
+```{r grafico-1-resultados-ia, echo=FALSE, message=FALSE, warning=FALSE, fig.height=2.5, fig.width=6, fig.cap="Gráfico 1: Percepción de resultados de la interacción con un chatbot IA para las cuestiones consultadas (N = 95)."}
 plot_likert(
   likert,
   "Resultados I.A.",
@@ -206,7 +206,7 @@ Por otro lado, también se preguntó a estas mismas personas, si son o fueron us
 
 Asimismo, con el fin de conocer la valoración de los servicios psicológicos profesionales, se solicitó a las 85 personas que utilizaron ambos servicios que calificaran los resultados obtenidos, para luego compararlos con aquellos obtenidos por el chatbot (véase el gráfico 2). En este sentido, se registró que un 79,9% de las personas indicaron resultados satisfactorios (buenos o muy buenos) en su uso de servicios profesionales, un 17,6% indicaron resultados regulares (ni buenos ni malos), y sólo un 2,4% indicaron resultados insatisfactorios (malos o muy malos). Se observa, de este modo, que el uso de chatbots como herramienta de ayuda psicológica no se asocia en la mayoría de los casos con una ponderación baja o negativa de la terapia tradicional.
 
-```{r grafico-2-servicios-profesionales, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Gráfico 2: Percepción de resultados de la interacción con servicios profesionales (N = 85)."}
+```{r grafico-2-servicios-profesionales, echo=FALSE, message=FALSE, warning=FALSE, fig.height=2.5, fig.width=6, fig.cap="Gráfico 2: Percepción de resultados de la interacción con servicios profesionales (N = 85)."}
 plot_likert(
   likert,
   "Resultados servicios profesionales",
@@ -218,7 +218,7 @@ plot_likert(
 
 A su vez, se hizo una comparación sobre la percepción entre los resultados de los servicios profesionales y los resultados de los servicios provistos por chatbots. Al respecto, se observó que un 5,3% de las personas encontraron mejores resultados (mejor o mucha mejor ayuda) en los servicios provistos por chatbots, un 21,6% los encontró similares, un 40,5% encontró peores resultados (peor o mucha peor ayuda) en esta nueva tecnología. Además, se destaca que un 32,6% no eligió dar una respuesta en el marco de las categorías comparativas, siendo lo más frecuente el no estar dispuesto a compararlas (véase al respecto el Gráfico 3).
 
-```{r grafico-3-comparacion-ia-profesionales, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Gráfico 3: Comparación de percepción de resultados de la IA con servicios profesionales (N = 85)."}
+```{r grafico-3-comparacion-ia-profesionales, echo=FALSE, message=FALSE, warning=FALSE, fig.height=2.5, fig.width=6, fig.cap="Gráfico 3: Comparación de percepción de resultados de la IA con servicios profesionales (N = 85)."}
 plot_likert(
   likert,
   "¿Cómo compararía?",
