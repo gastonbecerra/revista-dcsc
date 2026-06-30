@@ -20,6 +20,11 @@ body {
   margin: 20px auto;
   padding: 10px;
   max-width: 1200px;
+  text-align: justify;
+}
+
+#refs {
+  text-align: left;
 }
 
 h1.title {

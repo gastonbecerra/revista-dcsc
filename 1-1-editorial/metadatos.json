@@ -1,0 +1,33 @@
+{
+  "title_sp": "Editorial",
+  "title_en": "Editorial",
+
+  "abstract_sp": "Presentación del primer volumen de la Revista Desarrollos en Ciencias Sociales Computacionales.",
+  "abstract_en": "Presentation of the first volume of the Journal of Computational Social Sciences Developments.",
+
+  "keywords_sp": [],
+  "keywords_en": [],
+
+  "authors_name": ["Gastón Becerra"],
+  "authors_affiliation": ["Universidad de Flores, Facultad de Psicología y Ciencias Sociales, Argentina"],
+  "authors_orcid": ["https://orcid.org/0009-0006-9160-9744"],
+  "authors_email": ["gaston.becerra@uflouniversidad.edu.ar"],
+
+  "language": ["es"],
+  "type": "Text.Serial.Journal",
+  "format": ["application/pdf", "text/html"],
+  "section": "editorial",
+
+  "source": "Desarrollos en Ciencias Sociales Computacionales",
+  "publisher": "Universidad de Flores, Argentina",
+  "source_volume": "1",
+  "source_issue": "1",
+  "source_issn": "en trámite",
+  "identifier": "",
+  "identifier_uri": "",
+  "pages": "e1",
+
+  "date_created": "2026-06-30",
+  "date_issued": "2026-06-30",
+  "date_modified": "2026-06-30"
+}
