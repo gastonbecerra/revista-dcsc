@@ -4,25 +4,26 @@ param(
 )
 
 $root = Split-Path -Parent $PSCommandPath
-$preview = Join-Path $root "_preview"
 $python = "C:\Users\Gaston\AppData\Local\Programs\Python\Python313\python.exe"
 $print_script = Join-Path $root "print_pdf.py"
 
-if (-not (Test-Path $preview)) { New-Item -ItemType Directory -Path $preview -Force | Out-Null }
-
 function Invoke-PrintPDF {
     param($HtmlPath)
-    $name = [System.IO.Path]::GetFileName($HtmlPath)
-    $dest = Join-Path $preview $name
-    Copy-Item $HtmlPath $dest -Force
-    # inject @page rule
-    $content = Get-Content $dest -Raw
+    $Dir = Split-Path (Split-Path $HtmlPath -Parent) -Parent
+    $PaperName = Split-Path $Dir -Leaf
+    # inject @page rule if missing (outputs/ is gitignored)
+    $content = Get-Content $HtmlPath -Raw
     if ($content -notmatch '@page') {
         $content = $content -replace '<style>', "<style>`n@page { size: A4; margin: 0.75cm; }"
-        Set-Content $dest -Value $content -NoNewline
+        Set-Content $HtmlPath -Value $content
     }
-    Write-Host "Generando PDF: $name" -ForegroundColor Cyan
-    & $python $print_script $dest
+    Write-Host "Generando PDF: $PaperName" -ForegroundColor Cyan
+    Push-Location $Dir
+    try {
+        & $python $print_script $HtmlPath
+    } finally {
+        Pop-Location
+    }
 }
 
 if ($All) {
