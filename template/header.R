@@ -12,6 +12,10 @@ metadata <- fromJSON('metadatos.json')
 
 estilos <- "
 <style>
+@page {
+  size: A4;
+  margin: 1.5cm;
+}
 body {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
