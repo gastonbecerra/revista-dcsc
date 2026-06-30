@@ -1,7 +1,6 @@
 ---
-title: "Revista Desarrollos en Ciencias Sociales Computacionales"\r\nknit: (function(inputFile, ...) {
-  rmarkdown::render(inputFile, output_dir = "outputs", ...)
-})
+title: "Revista Desarrollos en Ciencias Sociales Computacionales"
+knit: (function(inputFile, ...) { rmarkdown::render(inputFile, output_dir = "outputs", ...) })
 output:
   html_document:
     self_contained: true
@@ -120,7 +119,7 @@ Tabla 2
 Con respecto a la valoración de los resultados obtenidos en la interacción, la mayoría de las personas que utilizaron IA con objetivos de ayuda psicológica tienden a dar una valoración positiva (véase el gráfico 1). Ante la pregunta sobre la percepción de los resultados de la interacción, un 58,5% de las personas percibió un resultado satisfactorio (es decir, bueno o muy bueno), mientras que un 29,7% no destacó que fuera bueno o malo, y el 6,9% restante indicó no estar seguro o estar ambivalente sobre el resultado de la interacción. Apenas el 2,3% de las personas consultadas manifestaron haber obtenido resultados negativos (malos o muy malos) en su interacción con el chatbot.
 
 ```{r graficos-likert-setup, echo=FALSE, message=FALSE, warning=FALSE}
-path <- "Gráficos likert - Resultados.xlsx"
+path <- "sources/graficos_likert_resultados.xlsx"
 
 likert <- readxl::read_excel(path, sheet = "Resultados cols")
 
@@ -305,3 +304,6 @@ Agradecemos a Gastón Becerra por la invitación a participar en este número y 
 
 <div id="refs"></div>
 
+```{r footer, echo=FALSE, results="asis"}
+source("../template/footer.R")
+```

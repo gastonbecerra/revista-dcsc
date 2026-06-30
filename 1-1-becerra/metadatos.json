@@ -1,0 +1,44 @@
+{
+  "title_sp": "mincaqdasr. Herramienta minimalista para anotación y codificación de documentos",
+  "abstract_sp": "mincaqdasr es una herramienta minimalista para el análisis cualitativo (CAQDAS), diseñada puntualmente para codificar o anotar corpus de documentos mediante una interfaz web. mincaqdasr genera un archivo .json que incluye todos los elementos del proyecto, (documentos, fragmentos, anotaciones, códigos, etc.) eliminando la necesidad de gestionar carpetas adicionales. mincaqdasr puede ser invocado desde R o de manera autónoma con cualquier navegador que tenga JavaScript habilitado.",
+  "keywords_sp": ["CAQDAS", "R", "JavaScript", "software para análisis cualitativo de datos asistido por computadora", "investigación cualitativa"],
+
+  "title_en": "mincaqdasr. A Minimalist Tool for Document Annotation and Coding",
+  "abstract_en": "mincaqdasr is a minimalist tool for qualitative analysis (CAQDAS), specifically designed for coding or annotating document corpora through a web interface. mincaqdasr generates a .json file that includes all project elements (documents, fragments, annotations, codes, etc.), eliminating the need to manage additional folders. mincaqdasr can be invoked from R or used independently with any browser that supports JavaScript.",
+  "keywords_en": ["CAQDAS", "R", "JavaScript", "computer-assisted qualitative data analysis software", "qualitative research"],
+
+  "authors_name": "Gastón Becerra",
+  "authors_affiliation": "Universidad de Flores, Facultad de Psicología y Ciencias Sociales, Argentina",
+  "authors_orcid": "https://orcid.org/0009-0006-9160-9744",
+  "authors_email": "gaston.becerra@uflouniversidad.edu.ar",
+
+  "language": ["es", "en"],
+  "type": "Text.Serial.Journal",
+  "format": ["application/pdf", "text/html"],
+
+  "repository_url": "https://github.com/gastonbecerra/mincaqdasr",
+  "readme_url": "",
+  "archive_url": "",
+  "documentation_url": "",
+  "vignette_url": "",
+  "demo_url": "",
+  "licence_url": "https://github.com/gastonbecerra/mincaqdasr?tab=GPL-3.0-1-ov-file#readme",
+  "website_url": "",
+
+  "techonologies": ["R", "JavaScript"],
+
+  "source": "Desarrollos en Ciencias Sociales Computacionales",
+  "publisher": "Universidad de Flores, Argentina",
+  "section": "desarrollos",
+  "source_volume": "1",
+  "source_issue": "1",
+  "source_issn": "en trámite",
+  "identifier": "",
+  "identifier_uri": "",
+  "pages": "e9",
+
+  "date_created": "2024-11-14",
+  "date_issued": "2025-06-30",
+  "date_modified": "2025-06-30"
+
+}

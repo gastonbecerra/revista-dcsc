@@ -1,7 +1,6 @@
 ---
-title: "Revista Desarrollos en Ciencias Sociales Computacionales"\r\nknit: (function(inputFile, ...) {
-  rmarkdown::render(inputFile, output_dir = "outputs", ...)
-})
+title: "Revista Desarrollos en Ciencias Sociales Computacionales"
+knit: (function(inputFile, ...) { rmarkdown::render(inputFile, output_dir = "outputs", ...) })
 output:
   html_document:
     self_contained: true
@@ -75,7 +74,7 @@ La mayoría de los docentes encuestados (69.5%) reportan no haber utilizado nunc
 
 ```{r echo=FALSE, fig.height=2.5, fig.width=6}
 
-path <- "Formularioencuesta.xlsx"
+path <- "sources/Formularioencuesta.xlsx"
 x <- readxl::read_excel(path)
 
 revista_theme <- ggplot2::theme_minimal(base_family = "Fira Sans Condensed", base_size = 12) +
@@ -331,3 +330,6 @@ Por último, en la Universidad de Flores, con desafíos éticos y epistemológic
 
 <div id="refs"></div>
 
+```{r footer, echo=FALSE, results="asis"}
+source("../template/footer.R")
+```

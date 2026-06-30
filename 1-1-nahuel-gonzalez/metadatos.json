@@ -16,19 +16,9 @@
   "type": "Text.Serial.Journal",
   "format": ["application/pdf", "text/html"],
 
-  "repository_url": "MISSING",
-  "readme_url": "MISSING",
-  "archive_url": "MISSING",
-  "documentation_url": "MISSING",
-  "vignette_url": "MISSING",
-  "demo_url": "MISSING",
-  "licence_url": "MISSING",
-
-  "technologies": [],
-
   "source": "Desarrollos en ciencias sociales computacionales",
   "publisher": "Universidad de Flores, Argentina",
-  "section": "Artículos de investigación",
+  "section": "articulos",
   "source_volume": "1",
   "source_issue": "1",
   "source_issn": "",

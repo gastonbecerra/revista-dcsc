@@ -1,0 +1,68 @@
+---
+title: "Revista Desarrollos en Ciencias Sociales Computacionales"
+knit: (function(inputFile, ...) { rmarkdown::render(inputFile, output_dir = "outputs", ...) })
+output:
+  html_document:
+    self_contained: true
+    theme: null
+    mathjax: null
+    highlight: tango
+    includes:
+      in_header: "custom-head.html"
+  word_document: default
+  pdf_document: 
+    latex_engine: xelatex
+    keep_tex: true
+    highlight: tango
+bibliography: referencias.bib
+csl: ../template/apa.csl
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{Fira Sans Condensed}
+---
+
+
+```{r header, echo=FALSE, results='asis'}
+source("../template/header.R")
+```
+
+## Justificación
+
+mincaqdasr es una herramienta para análisis cualitativo (CAQDAS), diseñada específicamente para asistir en la tarea de codificar o anotar un corpus de documentos breves a través de una interfaz web. 
+
+En investigación cualitativa, este proceso de anotación es conocido como "codificación", definido como "... una palabra o frase breve que simbólicamente asigna un atributo sintético, saliente, esencial y/o evocativo a una porción de datos basados en el lenguaje" [@saldaña2016, p. 3]. Este proceso suele ser uno de los primeros pasos en un diseño espiralado o por etapas, donde los códigos se integran en temas y argumentos para conceptualizar y desarrollar una narrativa teórica [@auerbach2003].
+
+La herramienta ofrece una interfaz gráfica sencilla que permite identificar y resaltar fragmentos de texto, crear e imputar códigos, y registrar memos o comentarios. El resultado de la codificación se exporta en formato JSON (JavaScript Object Notation), un estándar que puede ser manipulado desde cualquier lenguaje de análisis de datos, como R o Python. De este modo, mincaqdasr promueve la transparencia y la colaboración en la investigación cualitativa.
+
+Construida como una aplicación web autónoma, mincaqdasr puede ejecutarse en cualquier navegador que tenga JavaScript habilitado. Su diseño minimalista se centra exclusivamente en las tareas esenciales para la codificación, dejando al investigador la flexibilidad de gestionar otras etapas del análisis cualitativo, como la limpieza de datos, el manejo de documentos o la construcción de tablas y redes temáticas, utilizando los flujos de trabajo que considere más convenientes.
+
+El corpus se puede cargar como un vector simple de texto, eliminando la necesidad de crear carpetas o paquetes (bundles) como en otras herramientas. Para facilitar el trabajo en R, mincaqdasr incluye funciones para iniciar la interfaz como una shinyapp y para manipular el archivo JSON resultante de la codificación.
+
+## Estructura de los datos
+
+Los datos se guardan en un archivo JSON que incluye 4 elementos: 
+
+- documentos (como un vector de texto); 
+- códigos (un vector de texto);
+- anotaciones a nivel documento, referenciando uno o varios códigos y un memo del anotador;
+- anotaciones a nivel fragmento, referenciando uno o varios códigos y un memo del anotador;
+
+Incluimos dos ejemplos breves de codificaciones en formato JSON. El primero retoma fragmentos del trabajo de M. Zizi en el proyecto "The Yeshiva University Fatherhood Project", que Auerbach y Silverstein (2003) presentan en su libro, ilustrando paso a paso las tareas clave del análisis cualitativo: desde la lectura y selección de fragmentos hasta la asignación de códigos y su elaboración conceptual. Con mincaqdasr, es posible registrar todas estas tareas, excepto la última.
+
+El segundo ejemplo contiene fragmentos de noticias de la prensa argentina sobre "big data". En este caso, no se asignan códigos a fragmentos específicos; en su lugar, cada documento se clasifica con una etiqueta "positivo" o "negativo", según mencione una aplicación beneficiosa o un riesgo. Otras tareas de análisis con este corpus se detallan en otro material propio [@cursor].
+
+## Otras herramientas
+
+Existen varias herramientas comerciales para asistir en el análisis cualitativo (CAQDAS). Las más conocidas son NVivo, Maxda o Atlas.ti, que incluyen varias funciones de manejo de documentos y análisis, y que trabajan con varios formatos de documentos, no sólo textuales. 
+
+A diferencia de estas, mincaqdasr es gratuita y de código abierto, y se limita a texto plano y no cubre funciones más allá de las necesarias para anotar o codificar, lo que puede ser conveniente cuando el investigador maneja su flujo de trabajo en un lenguaje de análisis de datos como R.
+
+En R se encuentra disponible el package qcoder [@qcoder2024] que también permite la codificación a través de una interfaz gráfica que, además, permite la exploración de códigos y fragmentos. Sin embargo, tiene un manejo del proyecto y sus archivos mucho más estructurado, de modo que puede resultar más dificil de integrar en un código más amplio. No conocemos otros proyectos activos --y se debe advertir que qcoder no parece haber tenido actualizaciones en los últimos años-- que cumplan funciones de CAQDAS.
+
+## Referencias
+
+<div id="refs"></div>
+
+```{r footer, echo=FALSE, results="asis"}
+source("../template/footer.R")
+```

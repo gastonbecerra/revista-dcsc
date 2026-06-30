@@ -12,6 +12,7 @@
   "language": ["es"],
   "type": "Text.Serial.Journal",
   "format": ["application/pdf", "text/html"],
+  "section": "articulos",
 
   "source": "Desarrollos en Ciencias Sociales Computacionales",
   "publisher": "Univesidad de Flores",

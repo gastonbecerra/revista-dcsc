@@ -1,7 +1,11 @@
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
-suppressMessages(suppressWarnings(library(jsonlite)))
+suppressMessages(suppressWarnings({
+  library(jsonlite)
+  library(ggplot2)
+  library(dplyr)
+  library(readxl)
+}))
 
-library(jsonlite)
 metadata <- fromJSON('metadatos.json')
 
 # estilos ------
@@ -174,7 +178,7 @@ cat('
 <meta name="DC.Date.Modified" content="', metadata$date_modified, '" />
 <meta name="DC.Publisher" content="', metadata$publisher, '" />
 <meta name="DC.Format.extent" content="', metadata$publisher, '" />
-<meta name="DC.Subject" content="', metadata$section, '" />
+<meta name="DC.Subject" content="', if (!is.null(metadata$section)) metadata$section else '', '" />
 
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">',
 estilos, file = "custom-head.html")
@@ -243,55 +247,48 @@ cat('<p class="cita"><strong>Cita APA:</strong> ',
     ', ', metadata$pages, 
     '</p>', sep = "")
 
-# Tabla de URLs
-cat('<table style="width: 100%; border-collapse: collapse; margin-top: 10px;">')
-cat('<tr style="background-color: #f2f2f2; text-align: left;">',
-    '<th class="data-header">Recurso/Resources</th>',
-    '<th class="data-content">URL</th></tr>')
+# Tabla de URLs (solo si hay URLs definidas)
+has_urls <- function(x) !is.null(x) && length(x) > 0 && any(nchar(trimws(x)) > 0, na.rm = TRUE) && !any(tolower(trimws(x)) %in% c("missing", "na", "n/a"))
 
-url_types <- c("Repositorio/Repository", 
-               "Archivo/Archive", 
-               "Documentación", 
-               "Vignette", 
-               "Demo", 
-               "Licencia/Licence",
-               "Website")
-urls <- c(metadata$repository_url, 
-          metadata$archive_url, 
-          metadata$documentation_url, 
-          metadata$vignette_url, 
-          metadata$demo_url, 
-          metadata$licence_url,
-          metadata$website_url)
-for (i in seq_along(url_types)) {
-  if (urls[i] != "") {
+url_fields <- list(
+  list(label = "Repositorio/Repository",  url = metadata$repository_url),
+  list(label = "Archivo/Archive",         url = metadata$archive_url),
+  list(label = "Documentación",           url = metadata$documentation_url),
+  list(label = "Vignette",                url = metadata$vignette_url),
+  list(label = "Demo",                    url = metadata$demo_url),
+  list(label = "Licencia/Licence",        url = metadata$licence_url),
+  list(label = "Website",                 url = metadata$website_url)
+)
+url_fields <- url_fields[sapply(url_fields, function(f) has_urls(f$url))]
+
+if (length(url_fields) > 0) {
+  cat('<table style="width: 100%; border-collapse: collapse; margin-top: 10px;">')
+  cat('<tr style="background-color: #f2f2f2; text-align: left;">',
+      '<th class="data-header">Recurso/Resources</th>',
+      '<th class="data-content">URL</th></tr>')
+  for (f in url_fields) {
     cat('<tr>',
-        '<td class="data-header">', url_types[i], '</td>',
-        '<td class="data-content"><a href="', urls[i], '" target="_blank">', urls[i], '</a></td>',
+        '<td class="data-header">', f$label, '</td>',
+        '<td class="data-content"><a href="', f$url, '" target="_blank">', f$url, '</a></td>',
         '</tr>')
   }
-}
 
-cat('<tr>',
+  tech <- if (!is.null(metadata$techonologies)) metadata$techonologies
+          else if (!is.null(metadata$technologies)) metadata$technologies
+          else NULL
+
+  if (!is.null(tech) && length(tech) > 0 && any(nchar(tech) > 0)) {
+    cat('<tr>',
         '<td class="data-header">Lenguajes/Languages Formatos/Formats</td>',
         '<td class="data-content">')
-
-cat('<div class="tag-list">')
-for (tech in metadata$techonologies) {
-  cat('<div class="tag">', tech, '</div>')
+    cat('<div class="tag-list">')
+    for (t in tech) {
+      if (nchar(t) > 0) cat('<div class="tag">', t, '</div>')
+    }
+    cat('</div>')
+    cat('</td></tr>')
+  }
+  cat('</table>')
 }
-cat('</div>')
-cat('</td></tr>')
-cat('</table>')
 
-cat('</div>')
 
-# footer -----
-
-cat('<footer>',
-  '<p>', 
-  'Revista <strong>Desarrollos en Ciencias Sociales Computacionales</strong> | ISSN: en trámite <br/>',
-  '<a href="https://revistadesarrollos.uflo.edu.ar/">https://revistadesarrollos.uflo.edu.ar/</a> <br/>',
-  'Licenciatura en Sociología / Facultad de Psicología y Ciencias Sociales / Universidad de Flores, Argentina <br/>',
-  '</p>',
-  '</footer>')
