@@ -6,14 +6,12 @@ output:
     self_contained: true
     theme: null
     mathjax: null
-    highlight: tango
     includes:
       in_header: "custom-head.html"
   word_document: default
   pdf_document: 
     latex_engine: xelatex
     keep_tex: true
-    highlight: tango
 bibliography: referencias.bib
 csl: ../template/apa.csl
 header-includes:
