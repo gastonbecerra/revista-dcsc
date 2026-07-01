@@ -1,23 +1,43 @@
 {
-  "title_sp": "Editorial",
-  "title_en": "Editorial",
-
-  "abstract_sp": "Presentación del primer volumen de la Revista Desarrollos en Ciencias Sociales Computacionales.",
-  "abstract_en": "Presentation of the first volume of the Journal of Computational Social Sciences Developments.",
-
-  "keywords_sp": [],
-  "keywords_en": [],
-
-  "authors_name": ["Gastón Becerra"],
-  "authors_affiliation": ["Universidad de Flores, Facultad de Psicología y Ciencias Sociales, Argentina"],
-  "authors_orcid": ["https://orcid.org/0009-0006-9160-9744"],
-  "authors_email": ["gaston.becerra@uflouniversidad.edu.ar"],
-
-  "language": ["es"],
+  "title_sp": "Por una mirada amplia de las ciencias sociales computacionales",
+  "title_en": "Toward a Broad View of Computational Social Sciences",
+  "abstract_sp": "Esta editorial presenta una definición amplia de las ciencias sociales computacionales como espacio de diálogo entre investigación social y desarrollos informáticos. Sostiene que las CSC no deben reducirse a una caja de herramientas, sino comprenderse como un campo plural donde se articulan experimentación metodológica, investigación empírica y reflexión crítica. Para fundamentar esta posición, se reconstruye una breve genealogía del campo: el modelado y la simulación computacional, los métodos digitales y la construcción colaborativa de datos, la crítica epistemológica al big data y los desafíos actuales abiertos por la inteligencia artificial como tecnología epistémica. Desde esta perspectiva, la revista se constituye como un foro para socializar herramientas y desarrollos, artículos de investigación computacionales y de lo computacional, y experiencias formativas en ciencias sociales.",
+  "abstract_en": "This editorial presents a broad definition of computational social sciences as a space of dialogue between social research and computational developments. It argues that CSS should not be reduced to a toolbox, but understood as a plural field where methodological experimentation, empirical research, and critical reflection come together. To support this position, it reconstructs a brief genealogy of the field: computational modeling and simulation, digital methods and collaborative data construction, the epistemological critique of big data, and the current challenges opened by artificial intelligence as an epistemic technology. From this perspective, the journal is conceived as a forum for sharing tools and computational developments, research articles on computational methods and on computational phenomena, and formative experiences in the social sciences.",
+  "keywords_sp": [
+    "ciencias sociales computacionales",
+    "simulación",
+    "big data",
+    "inteligencia artificial",
+    "epistemología de las ciencias sociales"
+  ],
+  "keywords_en": [
+    "computational social sciences",
+    "simulation",
+    "big data",
+    "artificial intelligence",
+    "epistemology of the social sciences"
+  ],
+  "authors_name": [
+    "Gastón Becerra"
+  ],
+  "authors_affiliation": [
+    "Universidad de Flores, Argentina"
+  ],
+  "authors_orcid": [
+    "https://orcid.org/0000-0001-9432-8848"
+  ],
+  "authors_email": [
+    "gaston.becerra@uflouniversidad.edu.ar"
+  ],
+  "language": [
+    "es"
+  ],
   "type": "Text.Serial.Journal",
-  "format": ["application/pdf", "text/html"],
+  "format": [
+    "application/pdf",
+    "text/html"
+  ],
   "section": "editorial",
-
   "source": "Desarrollos en Ciencias Sociales Computacionales",
   "publisher": "Universidad de Flores, Argentina",
   "source_volume": "1",
@@ -26,7 +46,6 @@
   "identifier": "",
   "identifier_uri": "",
   "pages": "e1",
-
   "date_created": "2026-06-30",
   "date_issued": "2026-06-30",
   "date_modified": "2026-06-30"
