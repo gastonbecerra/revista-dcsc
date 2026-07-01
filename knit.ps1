@@ -4,6 +4,8 @@ param(
 )
 
 $Rscript = "D:\Rbin\R-4.4.1\bin\Rscript.exe"
+$pandoc = "C:\Program Files\RStudio\resources\app\bin\quarto\bin\tools"
+$env:PATH = "$pandoc;$env:PATH"
 $root = Split-Path -Parent $PSCommandPath
 
 function Invoke-Knit {
